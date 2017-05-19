@@ -1,1 +1,202 @@
-{ }
+{
+  "PassportAPPApplicantDetailsData" : {
+    "_id" : "wm-PassportAPPApplicantDetailsData-wm.LiveVariable-1495112253672",
+    "name" : "PassportAPPApplicantDetailsData",
+    "owner" : "Page",
+    "category" : "wm.LiveVariable",
+    "dataBinding" : [ {
+      "target" : "applicantGivenName",
+      "value" : "bind:Widgets.liveform1.formWidgets.form_field6.datavalue",
+      "type" : "string"
+    } ],
+    "operation" : "read",
+    "dataSet" : [ ],
+    "type" : "ApplicantDetails",
+    "isList" : true,
+    "saveInPhonegap" : false,
+    "maxResults" : 20,
+    "designMaxResults" : 10,
+    "inFlightBehavior" : "executeLast",
+    "startUpdate" : true,
+    "autoUpdate" : true,
+    "transformationRequired" : false,
+    "liveSource" : "PassportAPP",
+    "ignoreCase" : true,
+    "matchMode" : "start",
+    "orderBy" : "id asc",
+    "propertiesMap" : {
+      "columns" : [ {
+        "fieldName" : "id",
+        "type" : "integer",
+        "fullyQualifiedType" : "integer",
+        "columnName" : "ID",
+        "isPrimaryKey" : true,
+        "notNull" : true,
+        "length" : 0,
+        "precision" : 10,
+        "generator" : "identity",
+        "isRelated" : false,
+        "scale" : 0
+      }, {
+        "fieldName" : "applicantGivenName",
+        "type" : "string",
+        "fullyQualifiedType" : "string",
+        "columnName" : "ApplicantGivenName",
+        "isPrimaryKey" : false,
+        "notNull" : true,
+        "length" : 55,
+        "precision" : 0,
+        "generator" : "assigned",
+        "isRelated" : false,
+        "defaultValue" : "",
+        "scale" : 0
+      }, {
+        "fieldName" : "applicationType",
+        "type" : "string",
+        "fullyQualifiedType" : "string",
+        "columnName" : "ApplicationType",
+        "isPrimaryKey" : false,
+        "notNull" : true,
+        "length" : 255,
+        "precision" : 0,
+        "generator" : "assigned",
+        "isRelated" : false,
+        "scale" : 0
+      }, {
+        "fieldName" : "passportBookeltsize",
+        "type" : "integer",
+        "fullyQualifiedType" : "integer",
+        "columnName" : "PassportBookeltsize",
+        "isPrimaryKey" : false,
+        "notNull" : false,
+        "length" : 0,
+        "precision" : 10,
+        "generator" : "assigned",
+        "isRelated" : false,
+        "scale" : 0
+      }, {
+        "fieldName" : "applyingfor",
+        "type" : "string",
+        "fullyQualifiedType" : "string",
+        "columnName" : "Applyingfor",
+        "isPrimaryKey" : false,
+        "notNull" : false,
+        "length" : 255,
+        "precision" : 0,
+        "generator" : "assigned",
+        "isRelated" : false,
+        "scale" : 0
+      }, {
+        "fieldName" : "applicantSurName",
+        "type" : "string",
+        "fullyQualifiedType" : "string",
+        "columnName" : "ApplicantSurName",
+        "isPrimaryKey" : false,
+        "notNull" : true,
+        "length" : 45,
+        "precision" : 0,
+        "generator" : "assigned",
+        "isRelated" : false,
+        "defaultValue" : "",
+        "scale" : 0
+      }, {
+        "fieldName" : "gender",
+        "type" : "string",
+        "fullyQualifiedType" : "string",
+        "columnName" : "Gender",
+        "isPrimaryKey" : false,
+        "notNull" : true,
+        "length" : 20,
+        "precision" : 0,
+        "generator" : "assigned",
+        "isRelated" : false,
+        "defaultValue" : "",
+        "scale" : 0
+      }, {
+        "fieldName" : "dob",
+        "type" : "date",
+        "fullyQualifiedType" : "date",
+        "columnName" : "DOB",
+        "isPrimaryKey" : false,
+        "notNull" : true,
+        "length" : 0,
+        "precision" : 0,
+        "generator" : "assigned",
+        "isRelated" : false,
+        "defaultValue" : "",
+        "scale" : 0
+      }, {
+        "fieldName" : "reissueReason",
+        "type" : "string",
+        "fullyQualifiedType" : "string",
+        "columnName" : "ReissueReason",
+        "isPrimaryKey" : false,
+        "notNull" : false,
+        "length" : 80,
+        "precision" : 0,
+        "generator" : "assigned",
+        "isRelated" : false,
+        "defaultValue" : "",
+        "scale" : 0
+      } ],
+      "entityName" : "ApplicantDetails",
+      "fullyQualifiedName" : "com.passportapp.passportapp.ApplicantDetails",
+      "tableType" : "TABLE",
+      "primaryFields" : [ "id" ]
+    },
+    "isDefault" : true,
+    "bindCount" : 3,
+    "tableName" : "ApplicantDetails",
+    "tableType" : "TABLE",
+    "properties" : [ ],
+    "relatedTables" : [ ],
+    "filterFields" : { },
+    "package" : "com.passportapp.passportapp.ApplicantDetails"
+  },
+  "Passportapplicationfor" : {
+    "_id" : "wm-staticVariable1-wm.Variable-1495113449328",
+    "name" : "Passportapplicationfor",
+    "owner" : "Page",
+    "category" : "wm.Variable",
+    "dataBinding" : [ ],
+    "dataSet" : [ {
+      "name" : "Fresh Passport",
+      "dataValue" : "Fresh Passport"
+    }, {
+      "name" : "Re-issue of Passport",
+      "dataValue" : "Re-issue of Passport"
+    } ],
+    "type" : "entry",
+    "isList" : true,
+    "saveInPhonegap" : false
+  },
+  "reissueReason" : {
+    "_id" : "wm-reissueReason-wm.Variable-1495168191910",
+    "name" : "reissueReason",
+    "owner" : "Page",
+    "category" : "wm.Variable",
+    "dataBinding" : [ ],
+    "dataSet" : [ {
+      "name" : "Validity Expired within 3 years/Due to Expire",
+      "dataValue" : "Validity Expired within 3 years/Due to Expire"
+    }, {
+      "name" : "Validity Expired more than 3 years ago",
+      "dataValue" : "Validity Expired more than 3 years ago"
+    }, {
+      "name" : "Change in Existing Personal Particulars",
+      "dataValue" : "Change in Existing Personal Particulars"
+    }, {
+      "name" : "Exhaustion of Pages",
+      "dataValue" : "Exhaustion of Pages"
+    }, {
+      "name" : "Lost Passport",
+      "dataValue" : "Lost Passport"
+    }, {
+      "name" : "Damaged Passport",
+      "dataValue" : "Damaged Passport"
+    } ],
+    "type" : "entry",
+    "isList" : true,
+    "saveInPhonegap" : false
+  }
+}

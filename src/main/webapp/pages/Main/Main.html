@@ -1,11 +1,36 @@
 <wm-page data-ng-controller="MainPageController" name="mainpage" pagetitle="Main">
-    <wm-header content="header" name="header" height="auto"></wm-header>
-    <wm-top-nav name="topnav" content="topnav"></wm-top-nav>
     <wm-content name="content">
-        <wm-left-panel columnwidth="2" name="leftpanel" content="leftnav"></wm-left-panel>
-        <wm-page-content columnwidth="8" paddingleft="15" paddingright="15" name="mainContent">
+        <wm-page-content columnwidth="12" name="mainContent" padding="unset 15px">
+            <wm-liveform novalidate="false" errormessage="" title="Applicantdetails Info" iconclass="wi wi-edit" defaultmode="Edit" dataset="bind:Variables.PassportAPPApplicantDetailsData.dataSet" captionalign="left" captionposition="left" name="liveform1">
+                <wm-layoutgrid columns="1" name="layoutgrid1">
+                    <wm-gridrow name="gridrow1">
+                        <wm-gridcolumn columnwidth="12" name="gridcolumn1">
+                            <wm-form-field name="applyingfor" displayname="Applying for" show="true" primary-key="false" generator="assigned" key="applyingfor" type="string" readonly="false" required="true" widget="radioset" maxchars="255" placeholder="Enter value"
+                            validationmessage="Select application type" dataset="bind:Variables.Passportapplicationfor.dataSet" datafield="dataValue" displayfield="dataValue" layout="inline"></wm-form-field>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow2">
+                        <wm-gridcolumn columnwidth="12" name="gridcolumn2">
+                            <wm-container name="container1" show="bind:Widgets.liveform1.formWidgets.applyingfor.datavalue==='Re-issue of Passport'" deferload="true">
+                                <wm-form-field name="form_field6_1" displayname="If Re-Issue Specify Reason(s)" widget="radioset" show="true" type="custom" key="form_field6_1" placeholder="" dataset="bind:Variables.reissueReason.dataSet" datafield="dataValue"
+                                displayfield="dataValue" layout="inline" required="true" itemclass="media-list"></wm-form-field>
+                            </wm-container>
+                            <wm-form-field name="applicationType" displayname="Type of Application" show="true" primary-key="false" generator="assigned" key="applicationType" type="string" readonly="false" required="true" widget="radioset" maxchars="255"
+                            placeholder="Enter value" layout="inline" dataset="Normal, Tatkal"></wm-form-field>
+                            <wm-form-field name="passportBookeltsize" displayname="Passport Bookeltsize" show="true" primary-key="false" generator="assigned" key="passportBookeltsize" type="integer" readonly="false" required="true" step="0"
+                            widget="radioset" placeholder="Enter value" layout="inline" dataset="36 Pages, 60 Pages"></wm-form-field>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow3">
+                        <wm-gridcolumn columnwidth="12" name="gridcolumn3">
+                            <wm-form-field name="form_field6" displayname="NAme" widget="text" show="true" type="custom" placeholder="Enter name" inputtype="text" key="form_field6"></wm-form-field>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                </wm-layoutgrid>
+                <wm-form-field name="id" displayname="Id" show="false" primary-key="true" generator="identity" key="id" type="integer" readonly="true" required="true" step="0" widget="number" inputtype="number" placeholder="Enter value"></wm-form-field>
+                <wm-form-action key="reset" display-name="Reset" show="true" class="form-reset btn-secondary" iconclass="wi wi-refresh" title="Reset" action="reset()" disabled="false" type="button" update-mode="true"></wm-form-action>
+                <wm-form-action key="save" display-name="Save" show="true" class="form-save btn-success" iconclass="wi wi-save" title="Save" disabled="false" type="submit" update-mode="true"></wm-form-action>
+            </wm-liveform>
         </wm-page-content>
-        <wm-right-panel columnwidth="2" name="rightpanel" content="rightnav"></wm-right-panel>
     </wm-content>
-    <wm-footer name="footer" content="footer"></wm-footer>
 </wm-page>
