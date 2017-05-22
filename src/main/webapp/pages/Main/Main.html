@@ -410,7 +410,7 @@
                     </wm-gridrow>
                     <wm-gridrow name="gridrow58_1">
                         <wm-gridcolumn columnwidth="12" name="gridcolumn76_2">
-                            <wm-label padding="unset 0.5em" caption="Emergency contact Details *" fontsize="16" fontunit="px" fontweight="bold" backgroundcolor="#ddd2d2" width="100%" name="label9"></wm-label>
+                            <wm-label padding="unset 0.5em" caption="Emergency contact Details *" fontsize="16" fontunit="px" fontweight="bold" backgroundcolor="#ddd2d2" width="100%" name="label_emergencycontact"></wm-label>
                         </wm-gridcolumn>
                     </wm-gridrow>
                     <wm-gridrow name="gridrow61">
@@ -433,7 +433,7 @@
                     </wm-gridrow>
                     <wm-gridrow name="gridrow63_1">
                         <wm-gridcolumn columnwidth="12" name="gridcolumn81">
-                            <wm-label padding="unset 0.5em" caption="References in your village or Town or City *" fontsize="16" fontunit="px" fontweight="bold" backgroundcolor="#ddd2d2" width="100%" name="label10"></wm-label>
+                            <wm-label padding="unset 0.5em" caption="References in your village or Town or City *" fontsize="16" fontunit="px" fontweight="bold" backgroundcolor="#ddd2d2" width="100%" name="Label_ReferenceData"></wm-label>
                             <wm-form-field name="Referencecontactname1" displayname="First Reference Name and Address" widget="text" show="true" type="custom" captionalign="left" captionposition="top" required="true" inputtype="text" key="Referencecontactname1"
                             placeholder="Enter value"></wm-form-field>
                         </wm-gridcolumn>
@@ -459,6 +459,22 @@
                         <wm-gridcolumn columnwidth="6" name="gridcolumn98">
                             <wm-form-field name="Secondreftelephonenum" displayname="Telephone Number" widget="text" show="true" type="custom" inputtype="number" maxvalue="15" key="Secondreftelephonenum" placeholder="Enter value"></wm-form-field>
                         </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow70_1">
+                        <wm-gridcolumn columnwidth="6" name="gridcolumn87">
+                            <wm-label padding="unset 0.5em" caption="Previous Passport /Application Details" fontsize="16" fontunit="px" fontweight="bold" backgroundcolor="#ddd2d2" width="100%" name="PrevPP_applicationDetails"></wm-label>
+                        </wm-gridcolumn>
+                        <wm-gridcolumn columnwidth="6" name="gridcolumn88"></wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow71_2">
+                        <wm-gridcolumn columnwidth="6" name="gridcolumn89_1">
+                            <wm-label padding="unset 0.5em" name="label10" caption="Details of Previous/Current Diplomatic/Official Passport*"></wm-label>
+                        </wm-gridcolumn>
+                        <wm-gridcolumn columnwidth="6" name="gridcolumn90"></wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow72_2">
+                        <wm-gridcolumn columnwidth="6" name="gridcolumn91_1"></wm-gridcolumn>
+                        <wm-gridcolumn columnwidth="6" name="gridcolumn92_2"></wm-gridcolumn>
                     </wm-gridrow>
                 </wm-layoutgrid>
                 <wm-form-field name="id" displayname="Id" show="false" primary-key="true" generator="identity" key="id" type="integer" readonly="true" required="true" step="0" widget="number" inputtype="number" placeholder="Enter value"></wm-form-field>
