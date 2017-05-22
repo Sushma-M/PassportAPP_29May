@@ -635,6 +635,19 @@
     "isList" : true,
     "saveInPhonegap" : false
   },
+  "months" : {
+    "_id" : "wm-months-wm.Variable-1495453206380",
+    "name" : "months",
+    "owner" : "Page",
+    "category" : "wm.Variable",
+    "dataBinding" : [ ],
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "type" : "string",
+    "isList" : false,
+    "saveInPhonegap" : false
+  },
   "PassportAPPApplicantDetailsData" : {
     "_id" : "wm-PassportAPPApplicantDetailsData-wm.LiveVariable-1495112253672",
     "name" : "PassportAPPApplicantDetailsData",

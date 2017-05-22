@@ -503,11 +503,29 @@
                     </wm-gridrow>
                     <wm-gridrow name="gridrow73_1">
                         <wm-gridcolumn columnwidth="12" name="gridcolumn91_2">
-                            <wm-form-field displayname="Have you ever applied for passport, but not issued? *" widget="radioset" show="true" type="custom" name="passportissueStatus" captionalign="left" captionposition="top" dataset="Yes, No" layout="inline"></wm-form-field>
+                            <wm-form-field displayname="Have you ever applied for passport, but not issued?" widget="radioset" show="true" type="custom" name="passportapplicationStatus" captionalign="left" captionposition="top" dataset="Yes, No" layout="inline"
+                            required="true"></wm-form-field>
                         </wm-gridcolumn>
                     </wm-gridrow>
                     <wm-gridrow name="gridrow74">
-                        <wm-gridcolumn columnwidth="12" name="gridcolumn91_3"></wm-gridcolumn>
+                        <wm-gridcolumn columnwidth="12" name="gridcolumn91_3">
+                            <wm-panel iconclass="" autoclose="outsideClick" title="" name="passportApplicationdetails" show="bind:Widgets.liveform1.formWidgets.passportapplicationStatus.datavalue === 'Yes'">
+                                <wm-panel-footer name="panel_footer1">
+                                    <wm-layoutgrid name="layoutgrid7">
+                                        <wm-gridrow name="gridrow78">
+                                            <wm-gridcolumn columnwidth="6" name="gridcolumn96_2">
+                                                <wm-form-field displayname="Month and Year of Applying" widget="select" show="true" type="custom" name="monthandyear" dataset="bind:Variables.months.dataSet" datafield="dataValue" displayfield="dataValue"></wm-form-field>
+                                            </wm-gridcolumn>
+                                            <wm-gridcolumn columnwidth="6" name="gridcolumn97_2">
+                                                <wm-form-field displayname="Year" widget="text" show="true" type="custom" name="ApplicationYear" required="true" maxchars="4" inputtype="number"></wm-form-field>
+                                            </wm-gridcolumn>
+                                        </wm-gridrow>
+                                    </wm-layoutgrid>
+                                    <wm-form-field displayname="Name Of Passport Office where Applied" widget="text" show="true" type="custom" name="form_field90" required="true" validationmessage="Enter passport office name and location"></wm-form-field>
+                                </wm-panel-footer>
+                                <wm-form-field displayname="File Number" widget="text" show="true" type="custom" name="FileNumber" inputtype="number"></wm-form-field>
+                            </wm-panel>
+                        </wm-gridcolumn>
                     </wm-gridrow>
                 </wm-layoutgrid>
                 <wm-form-field name="id" displayname="Id" show="false" primary-key="true" generator="identity" key="id" type="integer" readonly="true" required="true" step="0" widget="number" inputtype="number" placeholder="Enter value"></wm-form-field>
