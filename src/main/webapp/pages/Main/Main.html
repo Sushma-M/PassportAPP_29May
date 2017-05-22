@@ -49,7 +49,7 @@
                         <wm-gridcolumn columnwidth="12" name="gridcolumn7">
                             <wm-form-field name="aliasnameconfirmation" displayname="Are you known by any other names(aliases)?" widget="radioset" show="true" type="custom" layout="inline" dataset="Yes, No" usekeys="false" on-click="aliasnameconfirmationClick($event, $scope)"
                             key="aliasnameconfirmation" placeholder=""></wm-form-field>
-                            <wm-container name="container2" show="bind:Widgets.liveform1.formWidgets.aliasnameconfirmation.datavalue === 'Yes'">
+                            <wm-container name="container2_aliasesnameYes" show="bind:Widgets.liveform1.formWidgets.aliasnameconfirmation.datavalue === 'Yes'">
                                 <wm-gridrow name="gridrow4">
                                     <wm-gridcolumn columnwidth="12" name="gridcolumn4">
                                         <wm-form-field name="AliasName1" displayname="AliasName1 Given Name (Given Name means First Name followed by middle Name (if any))" widget="text" show="true" type="custom" placeholder="Enter applicant name" inputtype="text"
@@ -70,6 +70,36 @@
                                 <wm-gridrow name="gridrow5">
                                     <wm-gridcolumn columnwidth="12" name="gridcolumn5">
                                         <wm-form-field name="AliasSurname2" displayname="surname" widget="text" show="true" type="custom" required="false" inputtype="text" key="applicantsurname" placeholder="Enter value" captionalign="left" captionposition="top"></wm-form-field>
+                                    </wm-gridcolumn>
+                                </wm-gridrow>
+                            </wm-container>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow72">
+                        <wm-gridcolumn columnwidth="12" name="gridcolumn7">
+                            <wm-form-field name="namechangeconfirmation" displayname="Have you ever changed your Name?*" widget="radioset" show="true" type="custom" layout="inline" dataset="Yes, No" usekeys="false" on-click="aliasnameconfirmationClick($event, $scope)"
+                            key="aliasnameconfirmation" placeholder=""></wm-form-field>
+                            <wm-container name="container_nameChangeYes" show="bind:Widgets.liveform1.formWidgets.namechangeconfirmation.datavalue === 'Yes'">
+                                <wm-gridrow name="gridrow4">
+                                    <wm-gridcolumn columnwidth="12" name="gridcolumn4">
+                                        <wm-form-field name="Namechange1" displayname="Previous Name1 Given Name (Given Name means First Name followed by middle Name (if any))" widget="text" show="true" type="custom" placeholder="Enter applicant name" inputtype="text"
+                                        key="form_field6" required="true" validationmessage="enter applicantt name" maxchars="45" autocomplete="false" captionalign="left" captionposition="top"></wm-form-field>
+                                    </wm-gridcolumn>
+                                </wm-gridrow>
+                                <wm-gridrow name="gridrow5">
+                                    <wm-gridcolumn columnwidth="12" name="gridcolumn5">
+                                        <wm-form-field name="NamechangeSurname1" displayname="surname" widget="text" show="true" type="custom" required="true" inputtype="text" key="applicantsurname" placeholder="Enter value" captionalign="left" captionposition="top"></wm-form-field>
+                                    </wm-gridcolumn>
+                                </wm-gridrow>
+                                <wm-gridrow name="gridrow4">
+                                    <wm-gridcolumn columnwidth="12" name="gridcolumn4">
+                                        <wm-form-field name="Namechangename2" displayname="Previous Name2 Given Name (Given Name means First Name followed by middle Name (if any))" widget="text" show="true" type="custom" placeholder="Enter applicant name"
+                                        inputtype="text" key="form_field6" required="false" validationmessage="enter applicantt name" maxchars="45" autocomplete="false" captionalign="left" captionposition="top"></wm-form-field>
+                                    </wm-gridcolumn>
+                                </wm-gridrow>
+                                <wm-gridrow name="gridrow5">
+                                    <wm-gridcolumn columnwidth="12" name="gridcolumn5">
+                                        <wm-form-field name="NameChangeSurname2" displayname="surname" widget="text" show="true" type="custom" required="false" inputtype="text" key="applicantsurname" placeholder="Enter value" captionalign="left" captionposition="top"></wm-form-field>
                                     </wm-gridcolumn>
                                 </wm-gridrow>
                             </wm-container>
@@ -201,11 +231,6 @@
                             maxchars="45" autocomplete="false" captionalign="left" captionposition="top"></wm-form-field>
                         </wm-gridcolumn>
                     </wm-gridrow>
-                    <wm-gridrow name="gridrow5">
-                        <wm-gridcolumn columnwidth="12" name="gridcolumn5">
-                            <wm-form-field name="Legalguardianssurname" displayname="surname" widget="text" show="true" type="custom" required="false" inputtype="text" key="applicantsurname" placeholder="Enter value" captionalign="left" captionposition="top"></wm-form-field>
-                        </wm-gridcolumn>
-                    </wm-gridrow>
                     <wm-gridrow name="gridrow29">
                         <wm-gridcolumn columnwidth="12" name="gridcolumn4">
                             <wm-form-field name="ApplicantMothersgivenname" displayname="Mother's Given Name (Given Name means First Name followed by middle Name (if any))" widget="text" show="true" type="custom" placeholder="Enter applicant name" inputtype="text"
@@ -217,26 +242,27 @@
                             <wm-form-field name="applicantMotherssurname" displayname="surname" widget="text" show="true" type="custom" required="false" inputtype="text" key="applicantsurname" placeholder="Enter value" captionalign="left" captionposition="top"></wm-form-field>
                         </wm-gridcolumn>
                     </wm-gridrow>
-                    <wm-gridrow name="gridrow30">
-                        <wm-gridcolumn columnwidth="12" name="gridcolumn4">
-                            <wm-form-field name="presentaddressoutofIndia" displayname="Is your present address out of India?" widget="radioset" show="true" type="custom" layout="inline" dataset="Yes, No" itemclass="media-list col-md-4 custom-rad" key="presentaddressoutofIndia"
-                            placeholder=""></wm-form-field>
-                        </wm-gridcolumn>
-                    </wm-gridrow>
                     <wm-gridrow name="gridrow33">
                         <wm-gridcolumn columnwidth="12" name="gridcolumn40">
                             <wm-label padding="unset 0.5em" caption="Present Residential Address Details (where applicant presently resides)" fontsize="16" fontunit="px" fontweight="bold" backgroundcolor="#ddd2d2" width="100%" name="ResidentialAddressSection"></wm-label>
                         </wm-gridcolumn>
                     </wm-gridrow>
-                    <wm-gridrow name="gridrow48">
-                        <wm-gridcolumn columnwidth="12" name="gridcolumn59">
-                            <wm-form-field name="housenumoutofindia" displayname="House Number and Street Name" widget="text" show="true" type="custom" required="true" captionalign="left" captionposition="top" inputtype="text" key="housenumoutofindia" placeholder="Enter value"></wm-form-field>
+                    <wm-gridrow name="gridrow71_1">
+                        <wm-gridcolumn columnwidth="12" name="gridcolumn91">
+                            <wm-form-field name="presentaddressoutofIndia" displayname="Is your present address out of India?" widget="radioset" show="true" type="custom" layout="inline" dataset="Yes, No" itemclass="media-list col-md-4 custom-rad" key="presentaddressoutofIndia"
+                            placeholder=""></wm-form-field>
                         </wm-gridcolumn>
                     </wm-gridrow>
                     <wm-gridrow name="gridrow47">
                         <wm-gridcolumn columnwidth="12" name="gridcolumn58">
                             <wm-container name="container_OutofIndia_yes" show="bind:Widgets.liveform1.formWidgets.presentaddressoutofIndia.datavalue === 'Yes'">
                                 <wm-layoutgrid name="layoutgrid3">
+                                    <wm-gridrow name="gridrow72_1">
+                                        <wm-gridcolumn columnwidth="12" name="gridcolumn92_1">
+                                            <wm-form-field name="housenumoutofindia" displayname="House Number and Street Name" widget="text" show="true" type="custom" required="true" captionalign="left" captionposition="top" inputtype="text" key="housenumoutofindia"
+                                            placeholder="Enter value"></wm-form-field>
+                                        </wm-gridcolumn>
+                                    </wm-gridrow>
                                     <wm-gridrow name="gridrow40">
                                         <wm-gridcolumn columnwidth="12" name="gridcolumn44">
                                             <wm-form-field name="VillageORCityORTown" displayname="Village or Town or City" widget="text" show="true" type="custom" required="true" inputtype="text" key="VillageORCityORTown" placeholder="Enter value"></wm-form-field>
@@ -278,17 +304,6 @@
                         <wm-gridcolumn columnwidth="12" name="gridcolumn43_1">
                             <wm-container name="container_outofIndia_No" show="bind:Widgets.liveform1.formWidgets.presentaddressoutofIndia.datavalue === 'No'">
                                 <wm-layoutgrid name="layoutgrid4">
-                                    <wm-gridrow name="gridrow44">
-                                        <wm-gridcolumn columnwidth="4" name="gridcolumn53">
-                                            <wm-label padding="unset 0.5em" name="residingsincelabel" caption="Residing Since" required="true"></wm-label>
-                                        </wm-gridcolumn>
-                                        <wm-gridcolumn columnwidth="4" name="gridcolumn88_1">
-                                            <wm-form-field name="form_field62" displayname="Month" widget="select" show="true" type="custom" required="true" dataset="01,02,03,04,05,06,07,08,09,10,11,12" datafield="All Fields" key="form_field62" placeholder="Select value"></wm-form-field>
-                                        </wm-gridcolumn>
-                                        <wm-gridcolumn columnwidth="5" name="gridcolumn52">
-                                            <wm-form-field name="residingfromyear" displayname="Year" widget="text" show="true" type="custom" required="true" inputtype="text" key="residingfromyear" placeholder="Enter value"></wm-form-field>
-                                        </wm-gridcolumn>
-                                    </wm-gridrow>
                                     <wm-gridrow name="gridrow68">
                                         <wm-gridcolumn columnwidth="12" name="gridcolumn89">
                                             <wm-form-field name="housenumandstreetnameWithinIndia" displayname="House Number and Street Name" widget="text" show="true" type="custom" required="true" captionalign="left" captionposition="top" inputtype="text"
@@ -401,14 +416,18 @@
                     <wm-gridrow name="gridrow61">
                         <wm-gridcolumn columnwidth="12" name="gridcolumn82">
                             <wm-form-field name="emergencyContactname" displayname="Name and Address" widget="text" show="true" type="custom" captionalign="left" captionposition="top" required="true" inputtype="text" key="emergencyContactname" placeholder="Enter value"></wm-form-field>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow73">
+                        <wm-gridcolumn columnwidth="6" name="gridcolumn94_1">
                             <wm-form-field name="emergencyMobnum" displayname="Mobile Number" widget="text" show="true" type="custom" required="true" inputtype="number" maxchars="10" key="emergencyMobnum" placeholder="Enter value"></wm-form-field>
+                        </wm-gridcolumn>
+                        <wm-gridcolumn columnwidth="6" name="gridcolumn95_1">
+                            <wm-form-field name="emergencytelephonenum" displayname="Telephone Number" widget="text" show="true" type="custom" inputtype="number" maxvalue="15" key="emergencytelephonenum" placeholder="Enter value"></wm-form-field>
                         </wm-gridcolumn>
                     </wm-gridrow>
                     <wm-gridrow name="gridrow62">
-                        <wm-gridcolumn columnwidth="6" name="gridcolumn83">
-                            <wm-form-field name="emergencytelephonenum" displayname="Telephone Number" widget="text" show="true" type="custom" inputtype="number" maxvalue="15" key="emergencytelephonenum" placeholder="Enter value"></wm-form-field>
-                        </wm-gridcolumn>
-                        <wm-gridcolumn columnwidth="6" name="gridcolumn85">
+                        <wm-gridcolumn columnwidth="12" name="gridcolumn85">
                             <wm-form-field name="emergencycontactEmail" displayname="Email ID" widget="text" show="true" type="custom" inputtype="email" key="emergencycontactEmail" placeholder="Enter value"></wm-form-field>
                         </wm-gridcolumn>
                     </wm-gridrow>
