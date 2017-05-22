@@ -538,6 +538,23 @@
     "isList" : true,
     "saveInPhonegap" : false
   },
+  "DetailsOfPrevorCurrentPP" : {
+    "_id" : "wm-DetailsOfPrevorCurrentPP-wm.Variable-1495447439249",
+    "name" : "DetailsOfPrevorCurrentPP",
+    "owner" : "Page",
+    "category" : "wm.Variable",
+    "dataBinding" : [ ],
+    "dataSet" : [ {
+      "name" : "DetailsAvailable",
+      "dataValue" : "Details Available"
+    }, {
+      "name" : "DetailsNotAvailableNeverHeldDiplomaticOfficialPassport",
+      "dataValue" : "Details Not Available/Never Held Diplomatic/Official Passport"
+    } ],
+    "type" : "entry",
+    "isList" : true,
+    "saveInPhonegap" : false
+  },
   "EduactionQualification" : {
     "_id" : "wm-EduactionQualification-wm.Variable-1495186080081",
     "name" : "EduactionQualification",
