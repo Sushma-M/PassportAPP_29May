@@ -533,11 +533,33 @@
                     </wm-gridrow>
                     <wm-gridrow name="gridrow81">
                         <wm-gridcolumn columnwidth="12" name="gridcolumn102">
-                            <wm-form-field displayname="1) Have you ever been charged with criminal proceedings or any arrest warrant/ summon pending" widget="switch" show="true" type="custom" name="form_field91" width="20%" dataset="Yes, No"></wm-form-field>
+                            <wm-form-field displayname="1) Have you ever been charged with criminal proceedings or any arrest warrant/ summon pending" widget="radioset" show="true" type="custom" name="form_otherinfo1" width="20%" dataset="Yes, No" captionalign="left"
+                            captionposition="top" required="true" layout="inline"></wm-form-field>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow82_1">
+                        <wm-gridcolumn columnwidth="12" name="gridcolumn101_1">
+                            <wm-panel iconclass="" autoclose="outsideClick" title="" name="panel2" show="bind:Widgets.liveform1.formWidgets.form_otherinfo1.datavalue === 'Yes'">
+                                <wm-form-field displayname="Name of Court and Place" widget="text" show="true" type="custom" name="Court_Name_Place1" required="true"></wm-form-field>
+                                <wm-form-field displayname="Case / FIR / Warrant Number" widget="text" show="true" type="custom" name="CASE_FIR_WRNT_num1" inputtype="text" required="true"></wm-form-field>
+                                <wm-form-field displayname="Law and Section(s)" widget="text" show="true" type="custom" name="Law_Section1"></wm-form-field>
+                            </wm-panel>
                         </wm-gridcolumn>
                     </wm-gridrow>
                     <wm-gridrow name="gridrow82">
-                        <wm-gridcolumn columnwidth="12" name="gridcolumn103"></wm-gridcolumn>
+                        <wm-gridcolumn columnwidth="12" name="gridcolumn103">
+                            <wm-form-field displayname="2) Have you at any time during the period of 5 years immediately preceeding the date of this application been convicted by a court in india for any criminal offence and sentenced to imprisonment for two years or more?"
+                            widget="radioset" show="true" type="custom" width="20%" dataset="Yes, No" name="form_othrInfo2" captionalign="left" captionposition="top" required="true" layout="inline"></wm-form-field>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow83">
+                        <wm-gridcolumn columnwidth="12" name="gridcolumn102_1">
+                            <wm-panel iconclass="" autoclose="outsideClick" title="" name="panel3" show="bind:Widgets.liveform1.formWidgets.form_otherinfo2.datavalue === 'Yes'">
+                                <wm-form-field displayname="Name of Court and Place" widget="text" show="true" type="custom" name="Court_Name_Place2" required="true"></wm-form-field>
+                                <wm-form-field displayname="Case / FIR / Warrant Number" widget="text" show="true" type="custom" name="CASE_FIR_WRNT_num2" inputtype="text" required="true"></wm-form-field>
+                                <wm-form-field displayname="Law and Section(s)" widget="text" show="true" type="custom" name="Law_Section2"></wm-form-field>
+                            </wm-panel>
+                        </wm-gridcolumn>
                     </wm-gridrow>
                 </wm-layoutgrid>
                 <wm-form-field name="id" displayname="Id" show="false" primary-key="true" generator="identity" key="id" type="integer" readonly="true" required="true" step="0" widget="number" inputtype="number" placeholder="Enter value"></wm-form-field>
