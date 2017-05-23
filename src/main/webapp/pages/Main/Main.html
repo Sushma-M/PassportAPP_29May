@@ -172,38 +172,33 @@
                     </wm-gridrow>
                     <wm-gridrow name="gridrow70">
                         <wm-gridcolumn columnwidth="12" name="gridcolumn99">
-                            <wm-form-field name="IsparentorSpouceGovtserv" displayname="Is either of yout parent (in case of minor)/spouse, a government servant?" widget="select" show="true" type="custom" required="true" dataset="Yes, No" key="IsparentorSpouceGovtserv"
-                            placeholder="Select value"></wm-form-field>
+                            <wm-form-field name="organizationName" displayname="Organization Name" widget="text" show="bind:Widgets.liveform1.formWidgets.EmploymentType.datavalue =='Government' || Widgets.liveform1.formWidgets.EmploymentType.datavalue == 'PSU' || Widgets.liveform1.formWidgets.EmploymentType.datavalue == 'Satutory Body'"
+                            type="custom" required="true" inputtype="text" key="form_field27" placeholder="Enter value"></wm-form-field>
                         </wm-gridcolumn>
                     </wm-gridrow>
                     <wm-gridrow name="gridrow71">
                         <wm-gridcolumn columnwidth="12" name="gridcolumn100">
-                            <wm-form-field name="EducationQualification" displayname="Educational qualification" widget="select" show="true" type="custom" required="true" dataset="bind:Variables.EduactionQualification.dataSet" key="EducationQualification"
+                            <wm-form-field name="IsparentorSpouceGovtserv" displayname="Is either of yout parent (in case of minor)/spouse, a government servant?" widget="select" show="true" type="custom" required="true" dataset="Yes, No" key="IsparentorSpouceGovtserv"
                             placeholder="Select value"></wm-form-field>
                         </wm-gridcolumn>
                     </wm-gridrow>
                     <wm-gridrow name="gridrow51">
                         <wm-gridcolumn columnwidth="12" name="gridcolumn67">
-                            <wm-form-field name="nonecreligibility" displayname="Are you eligible for Non-ECR category?" widget="select" show="true" type="custom" dataset="Yes, No" key="nonecreligibility" placeholder="Select value"></wm-form-field>
+                            <wm-form-field name="EducationQualification" displayname="Educational qualification" widget="select" show="true" type="custom" required="true" dataset="bind:Variables.EduactionQualification.dataSet" key="EducationQualification"
+                            placeholder="Select value"></wm-form-field>
                         </wm-gridcolumn>
                     </wm-gridrow>
                     <wm-gridrow name="gridrow22">
                         <wm-gridcolumn columnwidth="12" name="gridcolumn27">
-                            <wm-form-field name="visbleMarks" displayname="Visible Distinguishing mark" widget="text" show="true" type="custom" required="false" inputtype="text" key="visbleMarks" placeholder="Enter value"></wm-form-field>
+                            <wm-form-field name="nonecreligibility" displayname="Are you eligible for Non-ECR category?" widget="select" show="true" type="custom" dataset="Yes, No" key="nonecreligibility" placeholder="Select value"></wm-form-field>
                         </wm-gridcolumn>
                     </wm-gridrow>
                     <wm-gridrow name="gridrow23">
                         <wm-gridcolumn columnwidth="6" name="gridcolumn29">
-                            <wm-form-field name="Aadharnum" displayname="Aadhar Number" widget="text" show="true" type="custom" inputtype="number" maxchars="12" key="Aadharnum" placeholder="Enter value"></wm-form-field>
+                            <wm-form-field name="visbleMarks" displayname="Visible Distinguishing mark" widget="text" show="true" type="custom" required="false" inputtype="text" key="visbleMarks" placeholder="Enter value"></wm-form-field>
                         </wm-gridcolumn>
                         <wm-gridcolumn columnwidth="6" name="gridcolumn30">
-                            <wm-form-field name="aadharAgreement" displayname="I agree" widget="radioset" show="true" type="custom" dataset="Yes, No" layout="inline" itemclass="media-list col-md-4 custom-rad" key="aadharAgreement" placeholder=""></wm-form-field>
-                        </wm-gridcolumn>
-                    </wm-gridrow>
-                    <wm-gridrow name="gridrow24">
-                        <wm-gridcolumn columnwidth="12" name="gridcolumn32">
-                            <wm-form-field name="Applicantfathersgivenname" displayname="Father's Given Name (Given Name means First Name followed by middle Name (if any))" widget="text" show="true" type="custom" placeholder="Enter applicant name" inputtype="text"
-                            key="form_field6" required="false" validationmessage="enter applicantt name" maxchars="45" autocomplete="false" captionalign="left" captionposition="top"></wm-form-field>
+                            <wm-form-field name="Aadharnum" displayname="Aadhar Number" widget="text" show="true" type="custom" inputtype="number" maxchars="12" key="Aadharnum" placeholder="Enter value"></wm-form-field>
                         </wm-gridcolumn>
                     </wm-gridrow>
                     <wm-gridrow name="gridrow26">
@@ -212,33 +207,38 @@
                                 information for validation with Aadhaar (CIDR) database only for the purpose of authentication.</wm-html>
                         </wm-gridcolumn>
                     </wm-gridrow>
+                    <wm-gridrow name="gridrow24">
+                        <wm-gridcolumn columnwidth="12" name="gridcolumn32">
+                            <wm-form-field name="aadharAgreement" displayname="I agree" widget="radioset" show="true" type="custom" dataset="Yes, No" layout="inline" itemclass="media-list col-md-4 custom-rad" key="aadharAgreement" placeholder=""></wm-form-field>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
                     <wm-gridrow name="gridrow59">
                         <wm-gridcolumn columnwidth="12" name="gridcolumn77_1">
                             <wm-label padding="unset 0.5em" name="FamilyDetailsSection" caption="Family Details (Father/Mother/Legal Guardian details; at least one is mandatory.)" fontsize="16" fontunit="px" fontweight="bold" backgroundcolor="#ddd2d2" width="100%"></wm-label>
-                            <wm-form-field name="applicantfatherssurname" displayname="surname" widget="text" show="true" type="custom" required="false" inputtype="text" key="applicantsurname" placeholder="Enter value" captionalign="left" captionposition="top"></wm-form-field>
+                            <wm-form-field name="Applicantfathersgivenname" displayname="Father's Given Name (Given Name means First Name followed by middle Name (if any))" widget="text" show="true" type="custom" placeholder="Enter applicant name"
+                            inputtype="text" key="form_field6" required="false" validationmessage="enter applicantt name" maxchars="45" autocomplete="false" captionalign="left" captionposition="top"></wm-form-field>
                         </wm-gridcolumn>
                     </wm-gridrow>
                     <wm-gridrow name="gridrow26_1">
                         <wm-gridcolumn columnwidth="12" name="gridcolumn9">
+                            <wm-form-field name="applicantfatherssurname" displayname="surname" widget="text" show="true" type="custom" required="false" inputtype="text" key="applicantsurname" placeholder="Enter value" captionalign="left" captionposition="top"></wm-form-field>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow27">
+                        <wm-gridcolumn columnwidth="12" name="gridcolumn4">
                             <wm-form-field name="legalguardiansname" displayname="Legal Guardians Given Name (if applicable)" widget="text" show="true" type="custom" placeholder="Enter applicant name" inputtype="text" key="form_field6" required="false" validationmessage="enter applicantt name"
                             maxchars="45" autocomplete="false" captionalign="left" captionposition="top"></wm-form-field>
                         </wm-gridcolumn>
                     </wm-gridrow>
-                    <wm-gridrow name="gridrow27">
+                    <wm-gridrow name="gridrow29">
                         <wm-gridcolumn columnwidth="12" name="gridcolumn4">
                             <wm-form-field name="ApplicantMothersgivenname" displayname="Mother's Given Name (Given Name means First Name followed by middle Name (if any))" widget="text" show="true" type="custom" placeholder="Enter applicant name" inputtype="text"
                             key="form_field6" required="false" validationmessage="enter applicantt name" maxchars="45" autocomplete="false" captionalign="left" captionposition="top"></wm-form-field>
                         </wm-gridcolumn>
                     </wm-gridrow>
-                    <wm-gridrow name="gridrow29">
-                        <wm-gridcolumn columnwidth="12" name="gridcolumn4">
-                            <wm-form-field name="applicantMotherssurname" displayname="surname" widget="text" show="true" type="custom" required="false" inputtype="text" key="applicantsurname" placeholder="Enter value" captionalign="left" captionposition="top"></wm-form-field>
-                        </wm-gridcolumn>
-                    </wm-gridrow>
                     <wm-gridrow name="gridrow5">
                         <wm-gridcolumn columnwidth="12" name="gridcolumn5">
-                            <wm-form-field name="presentaddressoutofIndia" displayname="Is your present address out of India?" widget="radioset" show="true" type="custom" layout="inline" dataset="Yes, No" itemclass="media-list col-md-4 custom-rad" key="presentaddressoutofIndia"
-                            placeholder=""></wm-form-field>
+                            <wm-form-field name="applicantMotherssurname" displayname="surname" widget="text" show="true" type="custom" required="false" inputtype="text" key="applicantsurname" placeholder="Enter value" captionalign="left" captionposition="top"></wm-form-field>
                         </wm-gridcolumn>
                     </wm-gridrow>
                     <wm-gridrow name="gridrow33">
@@ -248,7 +248,8 @@
                     </wm-gridrow>
                     <wm-gridrow name="gridrow71_1">
                         <wm-gridcolumn columnwidth="12" name="gridcolumn91">
-                            <wm-form-field name="housenumoutofindia" displayname="House Number and Street Name" widget="text" show="true" type="custom" required="true" captionalign="left" captionposition="top" inputtype="text" key="housenumoutofindia" placeholder="Enter value"></wm-form-field>
+                            <wm-form-field name="presentaddressoutofIndia" displayname="Is your present address out of India?" widget="radioset" show="true" type="custom" layout="inline" dataset="Yes, No" itemclass="media-list col-md-4 custom-rad" key="presentaddressoutofIndia"
+                            placeholder=""></wm-form-field>
                         </wm-gridcolumn>
                     </wm-gridrow>
                     <wm-gridrow name="gridrow47">
@@ -257,41 +258,41 @@
                                 <wm-layoutgrid name="layoutgrid3">
                                     <wm-gridrow name="gridrow72_1">
                                         <wm-gridcolumn columnwidth="12" name="gridcolumn92_1">
-                                            <wm-form-field name="VillageORCityORTown" displayname="Village or Town or City" widget="text" show="true" type="custom" required="true" inputtype="text" key="VillageORCityORTown" placeholder="Enter value"></wm-form-field>
+                                            <wm-form-field name="housenumoutofindia" displayname="House Number and Street Name" widget="text" show="true" type="custom" required="true" captionalign="left" captionposition="top" inputtype="text" key="housenumoutofindia"
+                                            placeholder="Enter value"></wm-form-field>
                                         </wm-gridcolumn>
                                     </wm-gridrow>
                                     <wm-gridrow name="gridrow40">
                                         <wm-gridcolumn columnwidth="12" name="gridcolumn44">
-                                            <wm-form-field name="Country" displayname="Country" widget="text" show="true" type="custom" required="true" inputtype="text" key="Country" placeholder="Enter value"></wm-form-field>
+                                            <wm-form-field name="VillageORCityORTown" displayname="Village or Town or City" widget="text" show="true" type="custom" required="true" inputtype="text" key="VillageORCityORTown" placeholder="Enter value"></wm-form-field>
                                         </wm-gridcolumn>
                                     </wm-gridrow>
                                     <wm-gridrow name="gridrow41">
                                         <wm-gridcolumn columnwidth="6" name="gridcolumn46">
-                                            <wm-form-field name="StateORProvince" displayname="State/Province" widget="text" show="true" type="custom" required="false" inputtype="text" key="StateORProvince" placeholder="Enter value"></wm-form-field>
+                                            <wm-form-field name="Country" displayname="Country" widget="text" show="true" type="custom" required="true" inputtype="text" key="Country" placeholder="Enter value"></wm-form-field>
                                         </wm-gridcolumn>
                                         <wm-gridcolumn columnwidth="6" name="gridcolumn47">
-                                            <wm-form-field name="DistrictorCountry" displayname="District or Country" widget="text" show="true" type="custom" inputtype="text" key="DistrictorCountry" placeholder="Enter value"></wm-form-field>
+                                            <wm-form-field name="StateORProvince" displayname="State/Province" widget="text" show="true" type="custom" required="false" inputtype="text" key="StateORProvince" placeholder="Enter value"></wm-form-field>
                                         </wm-gridcolumn>
                                     </wm-gridrow>
                                     <wm-gridrow name="gridrow42">
                                         <wm-gridcolumn columnwidth="6" name="gridcolumn47_1">
-                                            <wm-form-field name="ZipCode" displayname="Zip Code" widget="text" show="true" type="custom" inputtype="number" maxchars="6" required="false" key="ZipCode" placeholder="Enter value"></wm-form-field>
+                                            <wm-form-field name="DistrictorCountry" displayname="District or Country" widget="text" show="true" type="custom" inputtype="text" key="DistrictorCountry" placeholder="Enter value"></wm-form-field>
                                         </wm-gridcolumn>
                                         <wm-gridcolumn columnwidth="6" name="gridcolumn48">
-                                            <wm-form-field name="MobileNumberoutofIndia" displayname="Mobile Number" widget="text" show="true" type="custom" required="true" inputtype="number" maxchars="10" key="MobileNumberoutofIndia" placeholder="Enter value"></wm-form-field>
+                                            <wm-form-field name="ZipCode" displayname="Zip Code" widget="text" show="true" type="custom" inputtype="number" maxchars="6" required="false" key="ZipCode" placeholder="Enter value"></wm-form-field>
                                         </wm-gridcolumn>
                                     </wm-gridrow>
                                     <wm-gridrow name="gridrow43">
                                         <wm-gridcolumn columnwidth="4" name="gridcolumn49">
-                                            <wm-form-field name="TelephoneNumberoutofIndia" displayname="Telephone Number" widget="text" show="true" type="custom" inputtype="number" maxvalue="15" key="TelephoneNumberoutofIndia" placeholder="Enter value"></wm-form-field>
+                                            <wm-form-field name="MobileNumberoutofIndia" displayname="Mobile Number" widget="text" show="true" type="custom" required="true" inputtype="number" maxchars="10" key="MobileNumberoutofIndia" placeholder="Enter value"></wm-form-field>
                                         </wm-gridcolumn>
                                         <wm-gridcolumn columnwidth="4" name="gridcolumn51">
-                                            <wm-form-field name="residingfrommonth" displayname="Month" widget="select" show="true" type="custom" required="true" dataset="01,02,03,04,05,06,07,08,09,10,11,12" datafield="All Fields" key="residingfrommonth"
-                                            placeholder="Select value"></wm-form-field>
+                                            <wm-form-field name="TelephoneNumberoutofIndia" displayname="Telephone Number" widget="text" show="true" type="custom" inputtype="number" maxvalue="15" key="TelephoneNumberoutofIndia" placeholder="Enter value"></wm-form-field>
                                         </wm-gridcolumn>
                                         <wm-gridcolumn columnwidth="4" name="gridcolumn50">
-                                            <wm-form-field name="housenumandstreetnameWithinIndia" displayname="House Number and Street Name" widget="text" show="true" type="custom" required="true" captionalign="left" captionposition="top" inputtype="text"
-                                            key="housenumandstreetnameWithinIndia" placeholder="Enter value"></wm-form-field>
+                                            <wm-form-field name="residingfrommonth" displayname="Month" widget="select" show="true" type="custom" required="true" dataset="01,02,03,04,05,06,07,08,09,10,11,12" datafield="All Fields" key="residingfrommonth"
+                                            placeholder="Select value"></wm-form-field>
                                         </wm-gridcolumn>
                                     </wm-gridrow>
                                 </wm-layoutgrid>
@@ -304,36 +305,37 @@
                                 <wm-layoutgrid name="layoutgrid4">
                                     <wm-gridrow name="gridrow68">
                                         <wm-gridcolumn columnwidth="12" name="gridcolumn89">
-                                            <wm-form-field name="VillageORTOwnorCitywithinIndia" displayname="Village or Town or City" widget="text" show="true" type="custom" required="true" inputtype="text" key="VillageORTOwnorCitywithinIndia" placeholder="Enter value"></wm-form-field>
+                                            <wm-form-field name="housenumandstreetnameWithinIndia" displayname="House Number and Street Name" widget="text" show="true" type="custom" required="true" captionalign="left" captionposition="top" inputtype="text"
+                                            key="housenumandstreetnameWithinIndia" placeholder="Enter value"></wm-form-field>
                                         </wm-gridcolumn>
                                     </wm-gridrow>
                                     <wm-gridrow name="gridrow45">
                                         <wm-gridcolumn columnwidth="6" name="gridcolumn54">
-                                            <wm-form-field name="StatewithinIndia" displayname="State" widget="text" show="true" type="custom" required="true" inputtype="text" key="StatewithinIndia" placeholder="Enter value"></wm-form-field>
+                                            <wm-form-field name="VillageORTOwnorCitywithinIndia" displayname="Village or Town or City" widget="text" show="true" type="custom" required="true" inputtype="text" key="VillageORTOwnorCitywithinIndia" placeholder="Enter value"></wm-form-field>
                                         </wm-gridcolumn>
                                         <wm-gridcolumn columnwidth="6" name="gridcolumn92">
-                                            <wm-form-field name="DistrictwithinInidaState" displayname="District" widget="text" show="true" type="custom" inputtype="text" key="DistrictwithinInidaState" placeholder="Enter value"></wm-form-field>
+                                            <wm-form-field name="StatewithinIndia" displayname="State" widget="text" show="true" type="custom" required="true" inputtype="text" key="StatewithinIndia" placeholder="Enter value"></wm-form-field>
                                         </wm-gridcolumn>
                                     </wm-gridrow>
                                     <wm-gridrow name="gridrow46">
                                         <wm-gridcolumn columnwidth="12" name="gridcolumn57">
-                                            <wm-form-field name="PoliceStationwithinindia" displayname="Police Station" widget="text" show="true" type="custom" required="true" inputtype="text" key="PoliceStationwithinindia" placeholder="Enter value"></wm-form-field>
+                                            <wm-form-field name="DistrictwithinInidaState" displayname="District" widget="text" show="true" type="custom" inputtype="text" key="DistrictwithinInidaState" placeholder="Enter value"></wm-form-field>
                                         </wm-gridcolumn>
                                     </wm-gridrow>
                                     <wm-gridrow name="gridrow47_1">
                                         <wm-gridcolumn columnwidth="6" name="gridcolumn60">
-                                            <wm-form-field name="PINCodewithininida" displayname="PIN" widget="text" show="true" type="custom" inputtype="number" required="true" key="PINCodewithininida" placeholder="Enter value"></wm-form-field>
+                                            <wm-form-field name="PoliceStationwithinindia" displayname="Police Station" widget="text" show="true" type="custom" required="true" inputtype="text" key="PoliceStationwithinindia" placeholder="Enter value"></wm-form-field>
                                         </wm-gridcolumn>
                                         <wm-gridcolumn columnwidth="6" name="gridcolumn93">
-                                            <wm-form-field name="MobileNumberwithinIndia" displayname="Mobile Number" widget="text" show="true" type="custom" required="true" inputtype="number" maxchars="10" key="MobileNumberwithinIndia" placeholder="Enter value"></wm-form-field>
+                                            <wm-form-field name="PINCodewithininida" displayname="PIN" widget="text" show="true" type="custom" inputtype="number" required="true" key="PINCodewithininida" placeholder="Enter value"></wm-form-field>
                                         </wm-gridcolumn>
                                     </wm-gridrow>
                                     <wm-gridrow name="gridrow48_1">
                                         <wm-gridcolumn columnwidth="6" name="gridcolumn62">
-                                            <wm-form-field name="TelephoneNumberwithinIndia" displayname="Telephone Number" widget="text" show="true" type="custom" inputtype="number" maxvalue="15" key="TelephoneNumberwithinIndia" placeholder="Enter value"></wm-form-field>
+                                            <wm-form-field name="MobileNumberwithinIndia" displayname="Mobile Number" widget="text" show="true" type="custom" required="true" inputtype="number" maxchars="10" key="MobileNumberwithinIndia" placeholder="Enter value"></wm-form-field>
                                         </wm-gridcolumn>
                                         <wm-gridcolumn columnwidth="6" name="gridcolumn63">
-                                            <wm-form-field name="EmailID" displayname="Email ID" widget="text" show="true" type="custom" inputtype="email" key="EmailID" placeholder="Enter value" regexp="^[a-zA-Z0-9.!#$%&amp;'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$"></wm-form-field>
+                                            <wm-form-field name="TelephoneNumberwithinIndia" displayname="Telephone Number" widget="text" show="true" type="custom" inputtype="number" maxvalue="15" key="TelephoneNumberwithinIndia" placeholder="Enter value"></wm-form-field>
                                         </wm-gridcolumn>
                                     </wm-gridrow>
                                 </wm-layoutgrid>
@@ -342,13 +344,13 @@
                     </wm-gridrow>
                     <wm-gridrow name="gridrow69">
                         <wm-gridcolumn columnwidth="12" name="gridcolumn94">
-                            <wm-form-field name="permanataddrssameaspresentaddrs" displayname="Is permanent address same as present address?" widget="radioset" show="true" type="custom" dataset="Yes,No" layout="inline" key="permanataddrssameaspresentaddrs"
-                            placeholder=""></wm-form-field>
+                            <wm-form-field name="EmailID" displayname="Email ID" widget="text" show="true" type="custom" inputtype="email" key="EmailID" placeholder="Enter value" regexp="^[a-zA-Z0-9.!#$%&amp;'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$"></wm-form-field>
                         </wm-gridcolumn>
                     </wm-gridrow>
                     <wm-gridrow name="gridrow34">
                         <wm-gridcolumn columnwidth="12" name="gridcolumn41">
-                            <wm-form-field name="form_field64" displayname="House Number and Street Name" widget="text" show="true" type="custom" required="true" captionalign="left" captionposition="top" inputtype="text" key="form_field64" placeholder="Enter value"></wm-form-field>
+                            <wm-form-field name="permanataddrssameaspresentaddrs" displayname="Is permanent address same as present address?" widget="radioset" show="true" type="custom" dataset="Yes,No" layout="inline" key="permanataddrssameaspresentaddrs"
+                            placeholder=""></wm-form-field>
                         </wm-gridcolumn>
                     </wm-gridrow>
                     <wm-gridrow name="gridrow36">
@@ -362,43 +364,43 @@
                                     </wm-gridrow>
                                     <wm-gridrow name="gridrow52">
                                         <wm-gridcolumn columnwidth="12" name="gridcolumn70">
-                                            <wm-form-field name="form_field65" displayname="Village or Town or City" widget="text" show="true" type="custom" required="true" inputtype="text" key="form_field65" placeholder="Enter value"></wm-form-field>
+                                            <wm-form-field name="form_field64" displayname="House Number and Street Name" widget="text" show="true" type="custom" required="true" captionalign="left" captionposition="top" inputtype="text" key="form_field64"
+                                            placeholder="Enter value"></wm-form-field>
                                         </wm-gridcolumn>
                                     </wm-gridrow>
                                     <wm-gridrow name="gridrow53">
                                         <wm-gridcolumn columnwidth="6" name="gridcolumn71">
-                                            <wm-form-field name="StateIfinIndia" displayname="State (If in India)" widget="text" show="true" type="custom" required="true" inputtype="text" key="StateIfinIndia" placeholder="Enter value"></wm-form-field>
+                                            <wm-form-field name="form_field65" displayname="Village or Town or City" widget="text" show="true" type="custom" required="true" inputtype="text" key="form_field65" placeholder="Enter value"></wm-form-field>
                                         </wm-gridcolumn>
                                         <wm-gridcolumn columnwidth="6" name="gridcolumn95">
-                                            <wm-form-field name="DistrictIfinIndia" displayname="District (If in India)" widget="text" show="true" type="custom" inputtype="text" key="DistrictIfinIndia" placeholder="Enter value"></wm-form-field>
+                                            <wm-form-field name="StateIfinIndia" displayname="State (If in India)" widget="text" show="true" type="custom" required="true" inputtype="text" key="StateIfinIndia" placeholder="Enter value"></wm-form-field>
                                         </wm-gridcolumn>
                                     </wm-gridrow>
                                     <wm-gridrow name="gridrow54">
                                         <wm-gridcolumn columnwidth="12" name="gridcolumn72">
-                                            <wm-form-field name="CountryIfabroad" displayname="Country (if Abroad)" widget="select" show="true" type="custom" dataset="bind:Variables.CountriesList.dataSet" datafield="dataValue" displayfield="dataValue" key="form_field17"
-                                            placeholder="Select value"></wm-form-field>
+                                            <wm-form-field name="DistrictIfinIndia" displayname="District (If in India)" widget="text" show="true" type="custom" inputtype="text" key="DistrictIfinIndia" placeholder="Enter value"></wm-form-field>
                                         </wm-gridcolumn>
                                     </wm-gridrow>
                                     <wm-gridrow name="gridrow55">
                                         <wm-gridcolumn columnwidth="12" name="gridcolumn74">
-                                            <wm-form-field name="form_field68" displayname="Police Station" widget="text" show="true" type="custom" required="true" inputtype="text" key="form_field68" placeholder="Enter value"></wm-form-field>
+                                            <wm-form-field name="CountryIfabroad" displayname="Country (if Abroad)" widget="select" show="true" type="custom" dataset="bind:Variables.CountriesList.dataSet" datafield="dataValue" displayfield="dataValue" key="form_field17"
+                                            placeholder="Select value"></wm-form-field>
                                         </wm-gridcolumn>
                                     </wm-gridrow>
                                     <wm-gridrow name="gridrow58">
                                         <wm-gridcolumn columnwidth="6" name="gridcolumn76_1">
-                                            <wm-form-field name="form_field69" displayname="PIN" widget="text" show="true" type="custom" inputtype="number" required="true" key="form_field69" placeholder="Enter value"></wm-form-field>
+                                            <wm-form-field name="form_field68" displayname="Police Station" widget="text" show="true" type="custom" required="true" inputtype="text" key="form_field68" placeholder="Enter value"></wm-form-field>
                                         </wm-gridcolumn>
                                         <wm-gridcolumn columnwidth="6" name="gridcolumn96">
-                                            <wm-form-field name="permanetMobnum" displayname="Mobile Number" widget="text" show="true" type="custom" required="true" inputtype="number" maxchars="10" key="permanetMobnum" placeholder="Enter value"></wm-form-field>
+                                            <wm-form-field name="form_field69" displayname="PIN" widget="text" show="true" type="custom" inputtype="number" required="true" key="form_field69" placeholder="Enter value"></wm-form-field>
                                         </wm-gridcolumn>
                                     </wm-gridrow>
                                     <wm-gridrow name="gridrow56">
                                         <wm-gridcolumn columnwidth="6" name="gridcolumn75">
-                                            <wm-form-field name="permanentTelenum" displayname="Telephone Number" widget="text" show="true" type="custom" inputtype="number" maxvalue="15" key="permanentTelenum" placeholder="Enter value"></wm-form-field>
+                                            <wm-form-field name="permanetMobnum" displayname="Mobile Number" widget="text" show="true" type="custom" required="true" inputtype="number" maxchars="10" key="permanetMobnum" placeholder="Enter value"></wm-form-field>
                                         </wm-gridcolumn>
                                         <wm-gridcolumn columnwidth="6" name="gridcolumn76">
-                                            <wm-form-field name="emergencyContactname" displayname="Name and Address" widget="text" show="true" type="custom" captionalign="left" captionposition="top" required="true" inputtype="text" key="emergencyContactname"
-                                            placeholder="Enter value"></wm-form-field>
+                                            <wm-form-field name="permanentTelenum" displayname="Telephone Number" widget="text" show="true" type="custom" inputtype="number" maxvalue="15" key="permanentTelenum" placeholder="Enter value"></wm-form-field>
                                         </wm-gridcolumn>
                                     </wm-gridrow>
                                 </wm-layoutgrid>
@@ -412,50 +414,49 @@
                     </wm-gridrow>
                     <wm-gridrow name="gridrow61">
                         <wm-gridcolumn columnwidth="12" name="gridcolumn82">
-                            <wm-form-field name="emergencyMobnum" displayname="Mobile Number" widget="text" show="true" type="custom" required="true" inputtype="number" maxchars="10" key="emergencyMobnum" placeholder="Enter value"></wm-form-field>
+                            <wm-form-field name="emergencyContactname" displayname="Name and Address" widget="text" show="true" type="custom" captionalign="left" captionposition="top" required="true" inputtype="text" key="emergencyContactname" placeholder="Enter value"></wm-form-field>
                         </wm-gridcolumn>
                     </wm-gridrow>
                     <wm-gridrow name="gridrow73">
                         <wm-gridcolumn columnwidth="6" name="gridcolumn94_1">
-                            <wm-form-field name="emergencytelephonenum" displayname="Telephone Number" widget="text" show="true" type="custom" inputtype="number" maxvalue="15" key="emergencytelephonenum" placeholder="Enter value"></wm-form-field>
+                            <wm-form-field name="emergencyMobnum" displayname="Mobile Number" widget="text" show="true" type="custom" required="true" inputtype="number" maxchars="10" key="emergencyMobnum" placeholder="Enter value"></wm-form-field>
                         </wm-gridcolumn>
                         <wm-gridcolumn columnwidth="6" name="gridcolumn95_1">
-                            <wm-form-field name="emergencycontactEmail" displayname="Email ID" widget="text" show="true" type="custom" inputtype="email" key="emergencycontactEmail" placeholder="Enter value" regexp="^[a-zA-Z0-9.!#$%&amp;'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$"></wm-form-field>
+                            <wm-form-field name="emergencytelephonenum" displayname="Telephone Number" widget="text" show="true" type="custom" inputtype="number" maxvalue="15" key="emergencytelephonenum" placeholder="Enter value"></wm-form-field>
                         </wm-gridcolumn>
                     </wm-gridrow>
                     <wm-gridrow name="gridrow62">
                         <wm-gridcolumn columnwidth="12" name="gridcolumn85">
-                            <wm-form-field name="Referencecontactname1" displayname="First Reference Name and Address" widget="text" show="true" type="custom" captionalign="left" captionposition="top" required="true" inputtype="text" key="Referencecontactname1"
-                            placeholder="Enter value"></wm-form-field>
+                            <wm-form-field name="emergencycontactEmail" displayname="Email ID" widget="text" show="true" type="custom" inputtype="email" key="emergencycontactEmail" placeholder="Enter value" regexp="^[a-zA-Z0-9.!#$%&amp;'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$"></wm-form-field>
                         </wm-gridcolumn>
                     </wm-gridrow>
                     <wm-gridrow name="gridrow63_1">
                         <wm-gridcolumn columnwidth="12" name="gridcolumn81">
                             <wm-label padding="unset 0.5em" caption="References in your village or Town or City *" fontsize="16" fontunit="px" fontweight="bold" backgroundcolor="#ddd2d2" width="100%" name="Label_ReferenceData"></wm-label>
-                            <wm-form-field name="firstrefMobnum" displayname="Mobile Number" widget="text" show="true" type="custom" required="false" inputtype="number" maxchars="10" key="firstrefMobnum" placeholder="Enter value"></wm-form-field>
+                            <wm-form-field name="Referencecontactname1" displayname="First Reference Name and Address" widget="text" show="true" type="custom" captionalign="left" captionposition="top" required="true" inputtype="text" key="Referencecontactname1"
+                            placeholder="Enter value"></wm-form-field>
                         </wm-gridcolumn>
                     </wm-gridrow>
                     <wm-gridrow name="gridrow64">
                         <wm-gridcolumn columnwidth="6" name="gridcolumn82_1">
-                            <wm-form-field name="firstreftelephonenum" displayname="Telephone Number" widget="text" show="true" type="custom" inputtype="number" maxvalue="15" key="firstreftelephonenum" placeholder="Enter value"></wm-form-field>
+                            <wm-form-field name="firstrefMobnum" displayname="Mobile Number" widget="text" show="true" type="custom" required="false" inputtype="number" maxchars="10" key="firstrefMobnum" placeholder="Enter value"></wm-form-field>
                         </wm-gridcolumn>
                         <wm-gridcolumn columnwidth="6" name="gridcolumn97">
-                            <wm-form-field name="Referencecontactname2" displayname="Second Reference Name and Address" widget="text" show="true" type="custom" captionalign="left" captionposition="top" required="true" inputtype="text" key="Referencecontactname2"
-                            placeholder="Enter value"></wm-form-field>
+                            <wm-form-field name="firstreftelephonenum" displayname="Telephone Number" widget="text" show="true" type="custom" inputtype="number" maxvalue="15" key="firstreftelephonenum" placeholder="Enter value"></wm-form-field>
                         </wm-gridcolumn>
                     </wm-gridrow>
                     <wm-gridrow name="gridrow65">
                         <wm-gridcolumn columnwidth="12" name="gridcolumn83_2">
-                            <wm-form-field name="SecondrefMobnum" displayname="Mobile Number" widget="text" show="true" type="custom" required="false" inputtype="number" maxchars="10" key="SecondrefMobnum" placeholder="Enter value"></wm-form-field>
+                            <wm-form-field name="Referencecontactname2" displayname="Second Reference Name and Address" widget="text" show="true" type="custom" captionalign="left" captionposition="top" required="true" inputtype="text" key="Referencecontactname2"
+                            placeholder="Enter value"></wm-form-field>
                         </wm-gridcolumn>
                     </wm-gridrow>
                     <wm-gridrow name="gridrow66">
                         <wm-gridcolumn columnwidth="6" name="gridcolumn85_1">
-                            <wm-form-field name="Secondreftelephonenum" displayname="Telephone Number" widget="text" show="true" type="custom" inputtype="number" maxvalue="15" key="Secondreftelephonenum" placeholder="Enter value"></wm-form-field>
+                            <wm-form-field name="SecondrefMobnum" displayname="Mobile Number" widget="text" show="true" type="custom" required="false" inputtype="number" maxchars="10" key="SecondrefMobnum" placeholder="Enter value"></wm-form-field>
                         </wm-gridcolumn>
                         <wm-gridcolumn columnwidth="6" name="gridcolumn98">
-                            <wm-form-field name="PreviousPPDetails_yes" displayname="Details of Previous/Current Diplomatic/Official Passport*" widget="radioset" show="true" type="custom" dataset="bind:Variables.DetailsOfPrevorCurrentPP.dataSet" captionalign="left"
-                            captionposition="top" layout="inline" datafield="dataValue" displayfield="dataValue" key="PreviousPPDetails_yes" placeholder=""></wm-form-field>
+                            <wm-form-field name="Secondreftelephonenum" displayname="Telephone Number" widget="text" show="true" type="custom" inputtype="number" maxvalue="15" key="Secondreftelephonenum" placeholder="Enter value"></wm-form-field>
                         </wm-gridcolumn>
                     </wm-gridrow>
                     <wm-gridrow name="gridrow70_1">
@@ -466,8 +467,8 @@
                     <wm-gridrow name="gridrow71_2">
                         <wm-gridcolumn columnwidth="12" name="gridcolumn89_1">
                             <wm-label padding="unset 0.5em" name="label10" caption=""></wm-label>
-                            <wm-form-field name="PreviousPPnum" displayname="Passport Number" widget="text" show="true" type="custom" placeholder="Enter Passport Number" maxchars="8" required="true" width="100%" regexp="^(?!^0+$)[a-zA-Z0-9]{3,20}$"
-                            validationmessage="Enter valid Passport Number" inputtype="text" key="PreviousPPnum"></wm-form-field>
+                            <wm-form-field displayname="Details of Previous/Current Diplomatic/Official Passport*" widget="radioset" show="true" type="custom" name="PreviousPPDetails_yes" dataset="bind:Variables.DetailsOfPrevorCurrentPP.dataSet"
+                            captionalign="left" captionposition="top" layout="inline" datafield="dataValue" displayfield="dataValue"></wm-form-field>
                         </wm-gridcolumn>
                     </wm-gridrow>
                     <wm-gridrow name="gridrow72_2">
@@ -476,24 +477,23 @@
                                 <wm-layoutgrid name="layoutgrid6">
                                     <wm-gridrow name="gridrow75">
                                         <wm-gridcolumn columnwidth="12" name="gridcolumn92_2">
-                                            <wm-form-field name="PrevPPIssueDate" displayname="Date of Issue (DD/MM/YYYY)" widget="date" show="true" type="custom" datepattern="dd/MM/yyyy" required="true" mindate="1540/01/01" maxdate="CURRENT_DATE" width="100%"
-                                            outputformat="dd/MM/yyyy" key="PrevPPIssueDate" placeholder="Select date"></wm-form-field>
+                                            <wm-form-field displayname="Passport Number" widget="text" show="true" type="custom" name="PreviousPPnum" placeholder="Enter Passport Number" maxchars="8" required="true" width="100%" regexp="^(?!^0+$)[a-zA-Z0-9]{3,20}$"
+                                            validationmessage="Enter valid Passport Number"></wm-form-field>
                                         </wm-gridcolumn>
                                     </wm-gridrow>
                                     <wm-gridrow name="gridrow76">
                                         <wm-gridcolumn columnwidth="6" name="gridcolumn97_1">
-                                            <wm-form-field name="PrevPPExpiryDate" displayname="Date of Expiry (DD/MM/YYYY)" widget="date" show="true" type="custom" datepattern="dd/MM/yyyy" required="true" mindate="1540/01/01" width="100%" outputformat="dd/MM/yyyy"
-                                            showweeks="false" key="PrevPPExpiryDate" placeholder="Select date"></wm-form-field>
+                                            <wm-form-field displayname="Date of Issue (DD/MM/YYYY)" widget="date" show="true" type="custom" name="PrevPPIssueDate" datepattern="dd/MM/yyyy" required="true" mindate="1540/01/01" maxdate="CURRENT_DATE" width="100%"
+                                            outputformat="dd/MM/yyyy"></wm-form-field>
                                         </wm-gridcolumn>
                                         <wm-gridcolumn columnwidth="6" name="gridcolumn94_2">
-                                            <wm-form-field name="PrevPP_IssuePlace" displayname="Place Of Issue" widget="text" show="true" type="custom" required="false" validationmessage="Enter Passport Issue Place" inputtype="text" key="PrevPP_IssuePlace"
-                                            placeholder="Enter value"></wm-form-field>
+                                            <wm-form-field displayname="Date of Expiry (DD/MM/YYYY)" widget="date" show="true" type="custom" datepattern="dd/MM/yyyy" required="true" mindate="1540/01/01" width="100%" name="PrevPPExpiryDate" outputformat="dd/MM/yyyy"
+                                            showweeks="false"></wm-form-field>
                                         </wm-gridcolumn>
                                     </wm-gridrow>
                                     <wm-gridrow name="gridrow77">
                                         <wm-gridcolumn columnwidth="12" name="gridcolumn96_1">
-                                            <wm-form-field name="passportapplicationStatus" displayname="Have you ever applied for passport, but not issued?" widget="radioset" show="true" type="custom" captionalign="left" captionposition="top" dataset="Yes, No"
-                                            layout="inline" required="true" key="passportapplicationStatus" placeholder=""></wm-form-field>
+                                            <wm-form-field displayname="Place Of Issue" widget="text" show="true" type="custom" name="PrevPP_IssuePlace" required="false" validationmessage="Enter Passport Issue Place"></wm-form-field>
                                         </wm-gridcolumn>
                                     </wm-gridrow>
                                 </wm-layoutgrid>
@@ -502,7 +502,8 @@
                     </wm-gridrow>
                     <wm-gridrow name="gridrow73_1">
                         <wm-gridcolumn columnwidth="12" name="gridcolumn91_2">
-                            <wm-form-field name="monthandyear" displayname="Month and Year of Applying" widget="select" show="true" type="custom" dataset="bind:Variables.months.dataSet" datafield="dataValue" displayfield="dataValue" key="monthandyear" placeholder="Select value"></wm-form-field>
+                            <wm-form-field displayname="Have you ever applied for passport, but not issued?" widget="radioset" show="true" type="custom" name="passportapplicationStatus" captionalign="left" captionposition="top" dataset="Yes, No" layout="inline"
+                            required="true"></wm-form-field>
                         </wm-gridcolumn>
                     </wm-gridrow>
                     <wm-gridrow name="gridrow74">
@@ -512,18 +513,16 @@
                                     <wm-layoutgrid name="layoutgrid7">
                                         <wm-gridrow name="gridrow78">
                                             <wm-gridcolumn columnwidth="6" name="gridcolumn96_2">
-                                                <wm-form-field name="ApplicationYear" displayname="Year" widget="text" show="true" type="custom" required="true" maxchars="4" inputtype="number" key="ApplicationYear" placeholder="Enter value"></wm-form-field>
+                                                <wm-form-field displayname="Month and Year of Applying" widget="select" show="true" type="custom" name="monthandyear" dataset="bind:Variables.months.dataSet" datafield="dataValue" displayfield="dataValue"></wm-form-field>
                                             </wm-gridcolumn>
                                             <wm-gridcolumn columnwidth="6" name="gridcolumn97_2">
-                                                <wm-form-field name="form_field90" displayname="Name Of Passport Office where Applied" widget="text" show="true" type="custom" required="true" validationmessage="Enter passport office name and location" inputtype="text"
-                                                key="form_field90" placeholder="Enter value"></wm-form-field>
+                                                <wm-form-field displayname="Year" widget="text" show="true" type="custom" name="ApplicationYear" required="true" maxchars="4" inputtype="number"></wm-form-field>
                                             </wm-gridcolumn>
                                         </wm-gridrow>
                                     </wm-layoutgrid>
-                                    <wm-form-field name="FileNumber" displayname="File Number" widget="text" show="true" type="custom" inputtype="number" key="FileNumber" placeholder="Enter value"></wm-form-field>
+                                    <wm-form-field displayname="Name Of Passport Office where Applied" widget="text" show="true" type="custom" name="form_field90" required="true" validationmessage="Enter passport office name and location"></wm-form-field>
                                 </wm-panel-footer>
-                                <wm-form-field name="form_field91" displayname="1) Have you ever been charged with criminal proceedings or any arrest warrant/ summon pending" widget="switch" show="true" type="custom" width="20%" dataset="Yes, No" key="form_field91"
-                                placeholder=""></wm-form-field>
+                                <wm-form-field displayname="File Number" widget="text" show="true" type="custom" name="FileNumber" inputtype="number"></wm-form-field>
                             </wm-panel>
                         </wm-gridcolumn>
                     </wm-gridrow>
@@ -534,9 +533,11 @@
                     </wm-gridrow>
                     <wm-gridrow name="gridrow81">
                         <wm-gridcolumn columnwidth="12" name="gridcolumn102">
-                            <wm-form-field name="organizationName" displayname="Organization Name" widget="text" show="bind:Widgets.liveform1.formWidgets.EmploymentType.datavalue =='Government' || Widgets.liveform1.formWidgets.EmploymentType.datavalue == 'PSU' || Widgets.liveform1.formWidgets.EmploymentType.datavalue == 'Satutory Body'"
-                            type="custom" required="true" inputtype="text" key="form_field27" placeholder="Enter value"></wm-form-field>
+                            <wm-form-field displayname="1) Have you ever been charged with criminal proceedings or any arrest warrant/ summon pending" widget="switch" show="true" type="custom" name="form_field91" width="20%" dataset="Yes, No"></wm-form-field>
                         </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow82">
+                        <wm-gridcolumn columnwidth="12" name="gridcolumn103"></wm-gridcolumn>
                     </wm-gridrow>
                 </wm-layoutgrid>
                 <wm-form-field name="id" displayname="Id" show="false" primary-key="true" generator="identity" key="id" type="integer" readonly="true" required="true" step="0" widget="number" inputtype="number" placeholder="Enter value"></wm-form-field>
