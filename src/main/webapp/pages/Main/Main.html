@@ -632,6 +632,39 @@
                             </wm-tile>
                         </wm-gridcolumn>
                     </wm-gridrow>
+                    <wm-gridrow name="gridrow95">
+                        <wm-gridcolumn columnwidth="12" name="gridcolumn115_1">
+                            <wm-html name="html2">
+                                <h3>Self Declaration</h3>
+                                <p>I owe allegiance to the sovereignty , unity &amp; integrity of India, and have not voluntarily acquired citizenship or travel document of any other country. I have not lost, surrendered or been deprived of the the citizenship
+                                    of India and I affirm that the information given by me in this form and the enclosures is true and I solely responsible for its accuracy, and I am liable to be penalized or prosecuted if found otherwise. I am aware
+                                    that under the Passport Act, 1967 it is a criminal offence to furnish any false information or to suppress any material information with a view to obtaining passport or travel document.</p>
+                            </wm-html>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow96">
+                        <wm-gridcolumn columnwidth="12" name="gridcolumn116">
+                            <wm-form-field widget="checkbox" show="true" type="custom" name="form_Agreefinal" checkedvalue="Yes" required="false" captionalign="right" captionposition="right" caption="I Agree"></wm-form-field>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow97">
+                        <wm-gridcolumn columnwidth="6" name="gridcolumn117">
+                            <wm-form-field displayname="Place" widget="text" show="true" type="custom" name="form_PlaceofApplicant" required="true"></wm-form-field>
+                        </wm-gridcolumn>
+                        <wm-gridcolumn columnwidth="6" name="gridcolumn118">
+                            <wm-form-field displayname="Custom field" widget="datetime" show="true" type="custom" name="form_FormSubmittime" datepattern="dd/MM/yyyy hh:mm:ss a" defaultvalue="CURRENT_DATE" required="true" disabled="true"></wm-form-field>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow98">
+                        <wm-gridcolumn columnwidth="12" name="gridcolumn119">
+                            <wm-html name="Final_note">
+                                <h3><strong>Note:</strong></h3>
+                                <p>Applicants are required to submit the proof of address of the present address only, irrespective of the date from which he/she has been residing at the given address. However, he/she is required to mention all the places
+                                    of stay during previous one year (from the date of application filling) in the Passport application form.</p>
+                                <table border="2"></table>
+                            </wm-html>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
                 </wm-layoutgrid>
                 <wm-form-field name="id" displayname="Id" show="false" primary-key="true" generator="identity" key="id" type="integer" readonly="true" required="true" step="0" widget="number" inputtype="number" placeholder="Enter value"></wm-form-field>
                 <wm-form-action key="reset" display-name="Reset" show="true" class="form-reset btn-secondary" iconclass="wi wi-refresh" title="Reset" action="reset()" disabled="false" type="button" update-mode="true"></wm-form-action>
