@@ -3,20 +3,12 @@
   "type" : "PARTIAL",
   "params" : [ ]
 }, {
-  "name" : "FreshPassport",
-  "type" : "PARTIAL",
-  "params" : [ ]
-}, {
   "name" : "Login",
   "type" : "PAGE",
   "params" : [ ]
 }, {
   "name" : "Main",
   "type" : "PAGE",
-  "params" : [ ]
-}, {
-  "name" : "ReissueofPassport",
-  "type" : "PARTIAL",
   "params" : [ ]
 }, {
   "name" : "footer",

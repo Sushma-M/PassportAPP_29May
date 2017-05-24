@@ -209,7 +209,7 @@
                     </wm-gridrow>
                     <wm-gridrow name="gridrow24">
                         <wm-gridcolumn columnwidth="12" name="gridcolumn32">
-                            <wm-form-field name="aadharAgreement" displayname="I agree" widget="radioset" show="true" type="custom" dataset="Yes, No" layout="inline" itemclass="media-list col-md-4 custom-rad" key="aadharAgreement" placeholder=""></wm-form-field>
+                            <wm-form-field name="aadharAgreement" displayname="I agree" widget="radioset" show="true" type="custom" dataset="Yes, No" layout="inline" itemclass="media-list col-md-4 custom-rad" key="aadharAgreement" placeholder="" required="true"></wm-form-field>
                         </wm-gridcolumn>
                     </wm-gridrow>
                     <wm-gridrow name="gridrow59">
@@ -644,7 +644,7 @@
                     </wm-gridrow>
                     <wm-gridrow name="gridrow96">
                         <wm-gridcolumn columnwidth="12" name="gridcolumn116">
-                            <wm-form-field widget="checkbox" show="true" type="custom" name="form_Agreefinal" checkedvalue="Yes" required="false" captionalign="right" captionposition="right" caption="I Agree"></wm-form-field>
+                            <wm-form-field widget="checkbox" show="true" type="custom" name="form_Agreefinal" checkedvalue="Yes" required="true" captionalign="right" captionposition="right" caption="I Agree" disabled="bind:Widgets.liveform1.formWidgets.aadharAgreement.datavalue === 'No'"></wm-form-field>
                         </wm-gridcolumn>
                     </wm-gridrow>
                     <wm-gridrow name="gridrow97">
