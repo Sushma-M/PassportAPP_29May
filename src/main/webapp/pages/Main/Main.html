@@ -483,12 +483,12 @@
                                     </wm-gridrow>
                                     <wm-gridrow name="gridrow76">
                                         <wm-gridcolumn columnwidth="6" name="gridcolumn97_1">
-                                            <wm-form-field displayname="Date of Issue (DD/MM/YYYY)" widget="date" show="true" type="custom" name="PrevPPIssueDate" datepattern="dd/MM/yyyy" required="true" mindate="1540/01/01" maxdate="CURRENT_DATE" width="100%"
-                                            outputformat="dd/MM/yyyy"></wm-form-field>
+                                            <wm-form-field displayname="Date of Issue (DD/MM/YYYY)" widget="date" show="true" type="custom" name="PrevPPIssueDate" datepattern="dd/MM/yyyy" required="true" mindate="bind:Widgets.liveform1.formWidgets.ApplicantDOB.datavalue"
+                                            maxdate="CURRENT_DATE" width="100%" outputformat="dd/MM/yyyy"></wm-form-field>
                                         </wm-gridcolumn>
                                         <wm-gridcolumn columnwidth="6" name="gridcolumn94_2">
-                                            <wm-form-field displayname="Date of Expiry (DD/MM/YYYY)" widget="date" show="true" type="custom" datepattern="dd/MM/yyyy" required="true" mindate="1540/01/01" width="100%" name="PrevPPExpiryDate" outputformat="dd/MM/yyyy"
-                                            showweeks="false"></wm-form-field>
+                                            <wm-form-field displayname="Date of Expiry (DD/MM/YYYY)" widget="date" show="true" type="custom" datepattern="dd/MM/yyyy" required="true" mindate="bind:Widgets.liveform1.formWidgets.PrevPPIssueDate.datavalue" width="100%"
+                                            name="PrevPPExpiryDate" outputformat="dd/MM/yyyy" showweeks="false"></wm-form-field>
                                         </wm-gridcolumn>
                                     </wm-gridrow>
                                     <wm-gridrow name="gridrow77">
