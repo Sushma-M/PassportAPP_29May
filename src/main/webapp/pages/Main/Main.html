@@ -11,7 +11,7 @@
                     </wm-gridrow>
                     <wm-gridrow name="gridrow2">
                         <wm-gridcolumn columnwidth="12" name="gridcolumn2">
-                            <wm-container name="container1" show="bind:Widgets.liveform1.formWidgets.applyingfor.datavalue==='Re-issue of Passport'" deferload="true">
+                            <wm-container name="container1" show="bind:Widgets.liveform1.formWidgets.applyingfor.datavalue==='Re-issue of Passport'" deferload="true" class="bordered">
                                 <wm-form-field name="form_field6_1" displayname="If Re-Issue Specify Reason(s)" widget="radioset" show="true" type="custom" key="form_field6_1" placeholder="" dataset="bind:Variables.reissueReason.dataSet" datafield="dataValue"
                                 displayfield="dataValue" layout="inline" required="true" itemclass="media-list col-md-4 custom-rad" validationmessage="test"></wm-form-field>
                             </wm-container>
@@ -48,7 +48,7 @@
                         <wm-gridcolumn columnwidth="12" name="gridcolumn7">
                             <wm-form-field name="aliasnameconfirmation" displayname="Are you known by any other names(aliases)?" widget="radioset" show="true" type="custom" layout="inline" dataset="Yes, No" usekeys="false" on-click="aliasnameconfirmationClick($event, $scope)"
                             key="aliasnameconfirmation" placeholder=""></wm-form-field>
-                            <wm-container name="container2_aliasesnameYes" show="bind:Widgets.liveform1.formWidgets.aliasnameconfirmation.datavalue === 'Yes'">
+                            <wm-container name="container2_aliasesnameYes" show="bind:Widgets.liveform1.formWidgets.aliasnameconfirmation.datavalue === 'Yes'" class="bordered">
                                 <wm-gridrow name="gridrow4">
                                     <wm-gridcolumn columnwidth="12" name="gridcolumn4">
                                         <wm-form-field name="AliasName1" displayname="AliasName1 Given Name (Given Name means First Name followed by middle Name (if any))" widget="text" show="true" type="custom" placeholder="Enter applicant name" inputtype="text"
@@ -78,7 +78,7 @@
                         <wm-gridcolumn columnwidth="12" name="gridcolumn7">
                             <wm-form-field name="namechangeconfirmation" displayname="Have you ever changed your Name?*" widget="radioset" show="true" type="custom" layout="inline" dataset="Yes, No" usekeys="false" on-click="aliasnameconfirmationClick($event, $scope)"
                             key="aliasnameconfirmation" placeholder=""></wm-form-field>
-                            <wm-container name="container_nameChangeYes" show="bind:Widgets.liveform1.formWidgets.namechangeconfirmation.datavalue === 'Yes'">
+                            <wm-container name="container_nameChangeYes" show="bind:Widgets.liveform1.formWidgets.namechangeconfirmation.datavalue === 'Yes'" class="bordered">
                                 <wm-gridrow name="gridrow4">
                                     <wm-gridcolumn columnwidth="12" name="gridcolumn4">
                                         <wm-form-field name="Namechange1" displayname="Previous Name1 Given Name (Given Name means First Name followed by middle Name (if any))" widget="text" show="true" type="custom" placeholder="Enter applicant name" inputtype="text"
@@ -128,11 +128,11 @@
                     </wm-gridrow>
                     <wm-gridrow name="gridrow16">
                         <wm-gridcolumn columnwidth="12" name="gridcolumn16">
-                            <wm-container name="container3" show="bind:Widgets.liveform1.formWidgets.Birthplaceconfirmation.datavalue === 'Yes'">
+                            <wm-container name="container3" show="bind:Widgets.liveform1.formWidgets.Birthplaceconfirmation.datavalue === 'Yes'" class="bordered">
                                 <wm-form-field name="CountryBirthplace" displayname="country" widget="select" show="true" type="custom" dataset="bind:Variables.CountriesList.dataSet" datafield="dataValue" displayfield="dataValue" key="form_field17" placeholder="Select value"></wm-form-field>
                                 <wm-label padding="unset 0.5em" name="label3" caption="If born before 15/08/1947 in a place now in Pakistan or Bangldesh, select &quot;Undivided India.&quot;"></wm-label>
                             </wm-container>
-                            <wm-container name="container4" show="bind:Widgets.liveform1.formWidgets.Birthplaceconfirmation.datavalue === 'No'">
+                            <wm-container name="container4" show="bind:Widgets.liveform1.formWidgets.Birthplaceconfirmation.datavalue === 'No'" class="bordered">
                                 <wm-layoutgrid name="layoutgrid2">
                                     <wm-gridrow name="gridrow17">
                                         <wm-gridcolumn columnwidth="6" name="gridcolumn17">
@@ -254,7 +254,7 @@
                     </wm-gridrow>
                     <wm-gridrow name="gridrow47">
                         <wm-gridcolumn columnwidth="12" name="gridcolumn58">
-                            <wm-container name="container_OutofIndia_yes" show="bind:Widgets.liveform1.formWidgets.presentaddressoutofIndia.datavalue === 'Yes'">
+                            <wm-container name="container_OutofIndia_yes" show="bind:Widgets.liveform1.formWidgets.presentaddressoutofIndia.datavalue === 'Yes'" class="bordered">
                                 <wm-layoutgrid name="layoutgrid3">
                                     <wm-gridrow name="gridrow72_1">
                                         <wm-gridcolumn columnwidth="12" name="gridcolumn92_1">
@@ -301,7 +301,7 @@
                     </wm-gridrow>
                     <wm-gridrow name="gridrow39">
                         <wm-gridcolumn columnwidth="12" name="gridcolumn43_1">
-                            <wm-container name="container_outofIndia_No" show="bind:Widgets.liveform1.formWidgets.presentaddressoutofIndia.datavalue === 'No'">
+                            <wm-container name="container_outofIndia_No" show="bind:Widgets.liveform1.formWidgets.presentaddressoutofIndia.datavalue === 'No'" class="bordered">
                                 <wm-layoutgrid name="layoutgrid4">
                                     <wm-gridrow name="gridrow68">
                                         <wm-gridcolumn columnwidth="12" name="gridcolumn89">
@@ -355,7 +355,7 @@
                     </wm-gridrow>
                     <wm-gridrow name="gridrow36">
                         <wm-gridcolumn columnwidth="12" name="gridcolumn43">
-                            <wm-container show="bind:Widgets.liveform1.formWidgets.permanataddrssameaspresentaddrs.datavalue === 'No'" name="container7_Permanentaddrsnotsame">
+                            <wm-container show="bind:Widgets.liveform1.formWidgets.permanataddrssameaspresentaddrs.datavalue === 'No'" name="container7_Permanentaddrsnotsame" class="bordered">
                                 <wm-layoutgrid name="layoutgrid5">
                                     <wm-gridrow name="gridrow60">
                                         <wm-gridcolumn columnwidth="12" name="gridcolumn79">
@@ -473,7 +473,7 @@
                     </wm-gridrow>
                     <wm-gridrow name="gridrow72_2">
                         <wm-gridcolumn columnwidth="12" name="gridcolumn91_1">
-                            <wm-container name="container9_previousDetails_PP" show="bind:Widgets.liveform1.formWidgets.PreviousPPDetails_yes.datavalue === 'Details Available'" deferload="false">
+                            <wm-container name="container9_previousDetails_PP" show="bind:Widgets.liveform1.formWidgets.PreviousPPDetails_yes.datavalue === 'Details Available'" deferload="false" class="bordered">
                                 <wm-layoutgrid name="layoutgrid6">
                                     <wm-gridrow name="gridrow75">
                                         <wm-gridcolumn columnwidth="12" name="gridcolumn92_2">
@@ -596,6 +596,40 @@
                         <wm-gridcolumn columnwidth="12" name="gridcolumn108">
                             <wm-form-field displayname="Name of the country" widget="autocomplete" show="bind:Widgets.liveform1.formWidgets.form_othrInfo5.datavalue === 'Yes'" type="custom" name="otherInfo5data" required="true" dataset="bind:Variables.CountriesList.dataSet"
                             searchkey="dataValue" displaylabel="dataValue" datafield="dataValue"></wm-form-field>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow90">
+                        <wm-gridcolumn columnwidth="12" name="gridcolumn109">
+                            <wm-form-field displayname="6) Have you ever returned to India on Emergency Certificate (EC) or were ever deported or repatriated?" widget="radioset" show="true" type="custom" required="true" captionalign="left" captionposition="top"
+                            layout="inline" dataset="Yes,No" name="form_othrInfo6"></wm-form-field>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow91">
+                        <wm-gridcolumn columnwidth="12" name="gridcolumn110">
+                            <wm-tile width="100%" name="tile1" show="bind:Widgets.liveform1.formWidgets.form_othrInfo6.datavalue === 'Yes'" class="bordered" backgroundposition="left">
+                                <wm-layoutgrid height="100%" name="layoutgrid8">
+                                    <wm-gridrow height="100%" name="gridrow92">
+                                        <wm-gridcolumn columnwidth="5" horizontalalign="center" name="gridcolumn111">
+                                            <wm-form-field displayname="EC No" widget="text" show="true" type="custom" name="form_Info6dataECnum" required="true"></wm-form-field>
+                                        </wm-gridcolumn>
+                                        <wm-gridcolumn columnwidth="7" horizontalalign="center" name="gridcolumn112">
+                                            <wm-form-field displayname="Date of Issue (DD/MM/YYYY)" widget="date" show="true" type="custom" name="EC_IssueDate" required="true" placeholder="Enter Date" datepattern="dd/MM/yyyy" outputformat="dd/MM/yyyy" maxdate="CURRENT_DATE"
+                                            hint="Provide date 01/MM/YYYY in case cannot recall  exact date"></wm-form-field>
+                                        </wm-gridcolumn>
+                                    </wm-gridrow>
+                                    <wm-gridrow name="gridrow94">
+                                        <wm-gridcolumn columnwidth="12" name="gridcolumn115">
+                                            <wm-form-field displayname="Country from where travelled on EC/Deported/Repatriated" widget="autocomplete" type="custom" name="TravelledonEC_countryname" required="true" dataset="bind:Variables.CountriesList.dataSet"
+                                            searchkey="dataValue" displaylabel="dataValue" datafield="dataValue" captionalign="left" captionposition="left"></wm-form-field>
+                                        </wm-gridcolumn>
+                                    </wm-gridrow>
+                                    <wm-gridrow name="gridrow94_1">
+                                        <wm-gridcolumn columnwidth="12" name="gridcolumn114">
+                                            <wm-form-field displayname="Issuing Authority" widget="text" show="true" type="custom" name="EC_issueAuthority" required="true" placeholder="Issuing Authority details.." validationmessage="Enter Issuing Authority details"></wm-form-field>
+                                        </wm-gridcolumn>
+                                    </wm-gridrow>
+                                </wm-layoutgrid>
+                            </wm-tile>
                         </wm-gridcolumn>
                     </wm-gridrow>
                 </wm-layoutgrid>
