@@ -47,7 +47,7 @@
                     <wm-gridrow name="gridrow7">
                         <wm-gridcolumn columnwidth="12" name="gridcolumn7">
                             <wm-form-field name="aliasnameconfirmation" displayname="Are you known by any other names(aliases)?" widget="radioset" show="true" type="custom" layout="inline" dataset="Yes, No" usekeys="false" on-click="aliasnameconfirmationClick($event, $scope)"
-                            key="aliasnameconfirmation" placeholder=""></wm-form-field>
+                            key="aliasnameconfirmation" placeholder="" required="true"></wm-form-field>
                             <wm-container name="container2_aliasesnameYes" show="bind:Widgets.liveform1.formWidgets.aliasnameconfirmation.datavalue === 'Yes'" class="bordered">
                                 <wm-gridrow name="gridrow4">
                                     <wm-gridcolumn columnwidth="12" name="gridcolumn4">
@@ -76,8 +76,8 @@
                     </wm-gridrow>
                     <wm-gridrow name="gridrow72">
                         <wm-gridcolumn columnwidth="12" name="gridcolumn7">
-                            <wm-form-field name="namechangeconfirmation" displayname="Have you ever changed your Name?*" widget="radioset" show="true" type="custom" layout="inline" dataset="Yes, No" usekeys="false" on-click="aliasnameconfirmationClick($event, $scope)"
-                            key="aliasnameconfirmation" placeholder=""></wm-form-field>
+                            <wm-form-field name="namechangeconfirmation" displayname="Have you ever changed your Name?" widget="radioset" show="true" type="custom" layout="inline" dataset="Yes, No" usekeys="false" on-click="aliasnameconfirmationClick($event, $scope)"
+                            key="aliasnameconfirmation" placeholder="" required="true"></wm-form-field>
                             <wm-container name="container_nameChangeYes" show="bind:Widgets.liveform1.formWidgets.namechangeconfirmation.datavalue === 'Yes'" class="bordered">
                                 <wm-gridrow name="gridrow4">
                                     <wm-gridcolumn columnwidth="12" name="gridcolumn4">
