@@ -1,6 +1,12 @@
 <wm-page data-ng-controller="MainPageController" name="mainpage" pagetitle="Main">
     <wm-content name="content">
         <wm-page-content columnwidth="12" name="mainContent" padding="unset 15px">
+            <wm-html name="html4">
+                <h1 style="text-align: center;">&nbsp;PASSPORT APPLICATION FORM</h1>
+                <h1 style="text-align: center;">Government of India, Ministry of External Affairs</h1>
+                <p style="text-align: center;">Please read the Passport Instruction Booklet carefully before filling the form. Furnishing of incorrect information/ suppression of information would lead to rejection of application and would attract penal provisions as prescribed under
+                    the Passports Act, 1967. Please produce your original documents at the time of submission of the form. All fields marked with (*) are mandatory to fill.</p>
+            </wm-html>
             <wm-liveform novalidate="false" errormessage="" title="Applicantdetails Info" iconclass="wi wi-edit" defaultmode="Edit" dataset="bind:Variables.PassportAPPApplicantDetailsData.dataSet" captionalign="left" captionposition="left" name="liveform1">
                 <wm-layoutgrid columns="1" name="layoutgrid1">
                     <wm-gridrow name="gridrow1">
@@ -292,15 +298,9 @@
                             <wm-container name="container_outofIndia_No" show="bind:Widgets.liveform1.formWidgets.presentaddressoutofIndia.datavalue === 'No'" class="bordered">
                                 <wm-layoutgrid name="layoutgrid4">
                                     <wm-gridrow name="gridrow99">
-                                        <wm-gridcolumn columnwidth="4" name="gridcolumn120">
-                                            <wm-label padding="unset 0.5em" name="ResidingSince" caption="Residing Since"></wm-label>
-                                        </wm-gridcolumn>
-                                        <wm-gridcolumn columnwidth="4" name="gridcolumn121">
-                                            <wm-form-field displayname="Month" widget="select" show="true" type="custom" name="ResidingSincemonth" placeholder="Select Month" dataset="bind:Variables.months.dataSet" datafield="dataValue" displayfield="name"
-                                            required="true"></wm-form-field>
-                                        </wm-gridcolumn>
-                                        <wm-gridcolumn columnwidth="4" name="gridcolumn122">
-                                            <wm-form-field displayname="Year" widget="text" show="true" type="custom" name="ResidingSinceYear" required="true" inputtype="number" placeholder="Enter Year"></wm-form-field>
+                                        <wm-gridcolumn columnwidth="12" name="gridcolumn120">
+                                            <wm-form-field displayname="Residing Since" widget="date" show="true" type="custom" name="ResidingSince" datepattern="dd/MM/yyyy" outputformat="dd/MM/yyyy" required="true" mindate="bind:Widgets.liveform1.formWidgets.ApplicantDOB.datavalue"
+                                            maxdate="CURRENT_DATE"></wm-form-field>
                                         </wm-gridcolumn>
                                     </wm-gridrow>
                                     <wm-gridrow name="gridrow68">
@@ -389,7 +389,7 @@
                                     </wm-gridrow>
                                     <wm-gridrow name="gridrow56">
                                         <wm-gridcolumn columnwidth="6" name="gridcolumn75">
-                                            <wm-form-field name="permanetMobnum" displayname="Mobile Number" widget="text" show="true" type="custom" required="true" inputtype="number" maxchars="10" key="permanetMobnum" placeholder="Enter value"></wm-form-field>
+                                            <wm-form-field name="permanetMobnum" displayname="Mobile Number" widget="text" show="true" type="custom" required="true" inputtype="number" maxchars="10" key="permanetMobnum" placeholder="Enter value" maxvalue="9999999999"></wm-form-field>
                                         </wm-gridcolumn>
                                         <wm-gridcolumn columnwidth="6" name="gridcolumn76">
                                             <wm-form-field name="permanentTelenum" displayname="Telephone Number" widget="text" show="true" type="custom" inputtype="number" maxvalue="15" key="permanentTelenum" placeholder="Enter value"></wm-form-field>
@@ -423,7 +423,7 @@
                     </wm-gridrow>
                     <wm-gridrow name="gridrow64">
                         <wm-gridcolumn columnwidth="6" name="gridcolumn82_1">
-                            <wm-form-field name="firstrefMobnum" displayname="Mobile Number" widget="text" show="true" type="custom" required="false" inputtype="number" maxchars="10" key="firstrefMobnum" placeholder="Enter value"></wm-form-field>
+                            <wm-form-field name="firstrefMobnum" displayname="Mobile Number" widget="text" show="true" type="custom" required="false" inputtype="number" maxchars="9999999999" key="firstrefMobnum" placeholder="Enter value"></wm-form-field>
                         </wm-gridcolumn>
                         <wm-gridcolumn columnwidth="6" name="gridcolumn97">
                             <wm-form-field name="firstreftelephonenum" displayname="Telephone Number" widget="text" show="true" type="custom" inputtype="number" maxvalue="15" key="firstreftelephonenum" placeholder="Enter value"></wm-form-field>
@@ -437,7 +437,7 @@
                     </wm-gridrow>
                     <wm-gridrow name="gridrow66">
                         <wm-gridcolumn columnwidth="6" name="gridcolumn85_1">
-                            <wm-form-field name="SecondrefMobnum" displayname="Mobile Number" widget="text" show="true" type="custom" required="false" inputtype="number" maxchars="10" key="SecondrefMobnum" placeholder="Enter value"></wm-form-field>
+                            <wm-form-field name="SecondrefMobnum" displayname="Mobile Number" widget="text" show="true" type="custom" required="false" inputtype="number" maxchars="10" key="SecondrefMobnum" placeholder="Enter value" maxvalue="9999999999"></wm-form-field>
                         </wm-gridcolumn>
                         <wm-gridcolumn columnwidth="6" name="gridcolumn98">
                             <wm-form-field name="Secondreftelephonenum" displayname="Telephone Number" widget="text" show="true" type="custom" inputtype="number" maxvalue="15" key="Secondreftelephonenum" placeholder="Enter value"></wm-form-field>
