@@ -135,7 +135,8 @@
                     <wm-gridrow name="gridrow16">
                         <wm-gridcolumn columnwidth="12" name="gridcolumn16">
                             <wm-container name="container3" show="bind:Widgets.liveform1.formWidgets.Birthplaceconfirmation.datavalue === 'Yes'" class="bordered">
-                                <wm-form-field name="CountryBirthplace" displayname="country" widget="select" show="true" type="custom" dataset="bind:Variables.CountriesList.dataSet" datafield="dataValue" displayfield="dataValue" key="form_field17" placeholder="Select value"></wm-form-field>
+                                <wm-form-field name="CountryBirthplace" displayname="country" widget="select" show="true" type="custom" dataset="bind:Variables.CountriesList.dataSet|filter : {dataValue: '!India'}" datafield="dataValue" displayfield="dataValue"
+                                key="form_field17" placeholder="Select value"></wm-form-field>
                                 <wm-label padding="unset 0.5em" name="label3" caption="If born before 15/08/1947 in a place now in Pakistan or Bangldesh, select &quot;Undivided India.&quot;"></wm-label>
                             </wm-container>
                             <wm-container name="container4" show="bind:Widgets.liveform1.formWidgets.Birthplaceconfirmation.datavalue === 'No'" class="bordered">
@@ -275,7 +276,8 @@
                                     </wm-gridrow>
                                     <wm-gridrow name="gridrow41">
                                         <wm-gridcolumn columnwidth="6" name="gridcolumn46">
-                                            <wm-form-field name="Country" displayname="Country" widget="text" show="true" type="custom" required="true" inputtype="text" key="Country" placeholder="Enter value"></wm-form-field>
+                                            <wm-form-field displayname="Country" widget="autocomplete" show="true" type="custom" name="Country" placeholder="Enter / Select country name" dataset="bind:Variables.CountriesList.dataSet|filter : {dataValue: '!India'}"
+                                            required="true"></wm-form-field>
                                         </wm-gridcolumn>
                                         <wm-gridcolumn columnwidth="6" name="gridcolumn47">
                                             <wm-form-field name="StateORProvince" displayname="State/Province" widget="text" show="true" type="custom" required="false" inputtype="text" key="StateORProvince" placeholder="Enter value"></wm-form-field>
